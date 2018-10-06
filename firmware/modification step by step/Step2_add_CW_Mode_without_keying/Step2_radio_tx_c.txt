@@ -1,0 +1,5 @@
+case 3:  // CWL
+case 4:  // CWU
+  *isig = 16384.f;  // 180930
+  *qsig = 0;
+  break;

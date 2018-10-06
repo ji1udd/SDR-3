@@ -1,0 +1,1 @@
+{ 0, 5, "MOD        ", " LSB  USB   AM  CWL  CWU  PSK ", func_mod },// •Ï•œ’²ƒ‚[ƒh

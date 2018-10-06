@@ -1,0 +1,9 @@
+case 3:  spectrum_set_highlight( -fc,-10 ); break;  // CW(LSB), 180930’Ç‰Á
+case 4:  spectrum_set_highlight(  10, fc ); break;  // CW(USB), 180930’Ç‰Á
+
+ :
+ :
+
+freq_update();     // 180930 •Ï•œ’²ƒ‚[ƒhİ’è‚É si5351‚ÌÄİ’è‚ğs‚¤‚æ‚¤‚É’Ç‰Á
+
+

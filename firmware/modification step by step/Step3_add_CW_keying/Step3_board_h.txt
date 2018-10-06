@@ -1,0 +1,4 @@
+// CW Key SW  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#define CWKEY_GPIO            GPIOA     // PA5                          // 180930
+#define CWKEY_PIN             5                                         // 180930
+#define CWKEY_PRESSED         (((CWKEY_GPIO->IDR) & (1<<CWKEY_PIN))==0) // 180930

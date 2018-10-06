@@ -1,0 +1,10 @@
+int offset = 0;                        // 180930
+if( tx==0 ) {                          // CWモード時の受信周波数オフセット処理
+  if( mod==3 )                         // CWLなら、
+    offset =  600;                     // ローカル周波数を上側にする
+  else if ( mod==4 )                   // CWUなら、
+    offset = -600;                     // ローカル周波数を下側にする
+}
+mute = 4;
+int flocal1 = freq + freqif1 + offset; // 180930 オフセット加算を追加
+

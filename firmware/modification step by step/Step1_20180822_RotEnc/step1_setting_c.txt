@@ -1,0 +1,1 @@
+rot_table = rot_table_sel ? (int *)rot_table_rev : (int *)rot_table_norm;

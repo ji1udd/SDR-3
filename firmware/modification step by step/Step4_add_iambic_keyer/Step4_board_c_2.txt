@@ -1,0 +1,1 @@
+beep_port_init();       // BEEP出力ポート初期化

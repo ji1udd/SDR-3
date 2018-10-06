@@ -1,0 +1,15 @@
+// CW Key SW  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#define DOT_GPIO              GPIOA     // PA5                          // 181006
+#define DOT_PIN               5
+#define DOT_PRESSED           (((DOT_GPIO->IDR) & (1<<DOT_PIN))==0)
+
+#define DASH_GPIO             GPIOA     // PA6
+#define DASH_PIN              6
+#define DASH_PRESSED          (((DASH_GPIO->IDR) & (1<<DASH_PIN))==0)
+
+// CW SideTone  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#define BEEP_GPIO             GPIOA     // PA11( USB D- , CN7 2pin )
+#define BEEP_PIN              11
+#define BEEP_ON()             PORT_SET(    BEEP_GPIO, BEEP_PIN )
+#define BEEP_OFF()            PORT_RESET(  BEEP_GPIO, BEEP_PIN )
+#define BEEP_TOGGLE()         PORT_TOGGLE( BEEP_GPIO, BEEP_PIN )

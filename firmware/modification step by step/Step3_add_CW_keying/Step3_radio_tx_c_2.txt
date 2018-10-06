@@ -1,0 +1,3 @@
+if (( mod==3) || ( mod==4 )) {     // CWL or CWU mode
+  cw_keying ( &isig ) ;
+}

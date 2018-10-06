@@ -1,0 +1,14 @@
+static int cw_ptt_on_pre = 0 ;
+static void radio_exec( void ) {
+  if ( (cw_ptt_on==1)&&(cw_ptt_on_pre==0) ) {
+    cw_ptt_on_pre = 1 ;
+    tx = 1;             // ëóêM
+    tx_freq_check();
+    trx_setting();
+    gui_update_button( N_BUTTON_TRX );
+  } else if ((cw_ptt_on==0)&&(cw_ptt_on_pre==1) ) {
+    cw_ptt_on_pre = 0 ;
+    tx = 0;             // ëóêMèIóπ
+    trx_setting();
+    gui_update_button( N_BUTTON_TRX );
+  }

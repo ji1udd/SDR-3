@@ -1,0 +1,7 @@
+//───────────────────────────────────
+//  BEEP 用 GPIO ポート初期化
+//───────────────────────────────────
+static void beep_port_init( void ) {
+  stm32_gpio_mode( BEEP_GPIO, BEEP_PIN, GPIO_MODE_OUT );
+  BEEP_OFF();
+}
