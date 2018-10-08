@@ -1,0 +1,1 @@
+tlv320aic3204_hpoutputsel( TLV_HPOUT_IN1, TLV_HPOUT_IN1 );    // IN1“ü—Í‚ğHPo—Í‚·‚é

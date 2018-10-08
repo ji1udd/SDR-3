@@ -1,0 +1,2 @@
+22, 0x18,   // Set the IN1L gain to -12dB  // 181007
+23, 0x18,   // Set the IN1R gain to -12dB  // 181007

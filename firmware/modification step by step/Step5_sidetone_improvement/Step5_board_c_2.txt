@@ -1,0 +1,8 @@
+#define BEEP_TIM_PRESCALER  100                                             // TIMERプリスケーラ
+#define BEEP_TIM_DIV   (SYSTEMCORECLOCK/BEEP_TIM_PRESCALER/600)             // SidoTone周波数600Hz
+static void beep_port_init( void ) {
+  stm32_gpio_mode( BEEP_GPIO, BEEP_PIN, GPIO_MODE_IN );                     // 初期状態 SideTone出力OFF
+  stm32_gpio_pupd( BEEP_GPIO, BEEP_PIN, GPIO_PUPD_PU );                     // GPIOプルアップイネーブル
+  stm32_timer_pwm_cfg( TIM1, 4, (BEEP_TIM_PRESCALER-1), (BEEP_TIM_DIV-1) ); // TIM1 CH4 PWM出力
+  stm32_timer_pwm    ( TIM1, 4, (BEEP_TIM_DIV/2) );                         // Duty50%
+}

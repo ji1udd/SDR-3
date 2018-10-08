@@ -1,0 +1,1 @@
+#define TLV_HPOUT_IN1       0x04  // IN1 -> HPOUT
