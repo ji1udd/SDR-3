@@ -1,0 +1,43 @@
+//--------------------------------------------------------------------
+// iambic keyer のスピード設定
+//--------------------------------------------------------------------
+int keyer_speed = 24 ; // 24WPM = DotTime 50ms
+static void set_keyer_speed( int rot ) {
+  keyer_speed += rot;
+  if (keyer_speed < 10) { // 上下限リミット処理
+    keyer_speed = 10;
+  } else if ( keyer_speed > 40 ) {
+    keyer_speed = 40;
+  }
+  DotTime = 1200 / keyer_speed ; // WPM -> Time変換
+  DashTime = DotTime * 3 ;
+  dec2str_s( keyer_speed, setting_buttons[N_KEYSPD].str+16, 2 );
+}
+
+//--------------------------------------------------------------------
+// iambic keyer のブレークイン時間設定
+//--------------------------------------------------------------------
+static void set_breakin_time ( int rot ) {
+  BreakinTime += rot;  // breakin_time は、0 が50ms を意味する
+  if (BreakinTime < 50) { // 上下限リミット処理
+    BreakinTime = 50;
+  } else if ( BreakinTime > 500 ) {
+    BreakinTime = 500;
+  }
+  dec2str_s( BreakinTime, setting_buttons[N_BKTIME%N_ITEMS].str+15, 3 );
+}
+
+//--------------------------------------------------------------------
+// iambic keyer のSideTone 音量設定
+//--------------------------------------------------------------------
+int st_vol = 93 ; // 93 = 117 - 24 (-12dB)
+static void set_sidetone_vol ( int rot ) {
+  st_vol += rot ;
+  if ( st_vol > 117) {
+    st_vol=117;
+  } else if ( st_vol <0 ) {
+    st_vol=0 ;
+  }
+  tlv320aic3204_IN1_DigitalVolume(st_vol); 
+  dec2str_s( st_vol, setting_buttons[N_STVOL%N_ITEMS].str+15, 3 );
+}

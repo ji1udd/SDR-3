@@ -1,0 +1,3 @@
+extern int DotTime ;
+extern int DashTime;
+extern int BreakinTime;

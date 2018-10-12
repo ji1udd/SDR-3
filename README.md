@@ -31,4 +31,13 @@ Modification step by step.
 [_RC LPF Schematic_](hardware/SDR-3_SideTone.pdf)
 [_Photo_](hardware/SDR-3_sidetone.JPG)
 - Sidetoneの音量についてメニューは未実装。変更したい場合は、 tlv320aic3204.c の修正内容を変更する必要がある。
-- Step5フォルダ中にあるkeyerフォルダを使う (keyerフォルダを差し替える必要あり)
+- Step5フォルダ中にあるkeyerフォルダを使う (keyerフォルダを差し替える必要あり。内容更新あり)
+
+### Step6:
+- settingメニューに、下記のiambicキーヤーの設定項目を追加
+- Speed：10～40 WPM
+- Break-in 時間： 50～500 ms (実際は、数十msの誤差あり)
+- Sidetone 音量： 0 ～ 117
+- Step6フォルダ中にあるkeyerフォルダを使う (keyerフォルダを差し替える必要あり。内容更新あり)
+- radio.c における CWモード追加時のバグ修正
+

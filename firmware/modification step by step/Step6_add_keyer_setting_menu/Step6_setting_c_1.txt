@@ -1,0 +1,19 @@
+static void set_keyer_speed( int rot );
+static void set_breakin_time( int rot );
+static void set_sidetone_vol( int rot );
+
+
+
+#define N_SETTINGS  (12)       // İ’è€–Ú”
+
+
+
+{ "10.Keyer Speed    ", set_keyer_speed  },  // 
+{ "11.BreakIn time   ", set_breakin_time  },  // 
+{ "12.SideTone Vol   ", set_sidetone_vol  },  // 
+
+
+
+N_KEYSPD,             //
+N_BKTIME,             //
+N_STVOL,              //

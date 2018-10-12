@@ -1,0 +1,6 @@
+keyer_speed       = *adrs++;  // 
+DotTime = 1200 / keyer_speed; // WPM -> Time•ÏŠ·
+DashTime = DotTime * 3 ;
+BreakinTime      = *adrs++;  // 
+st_vol           = *adrs++; 
+tlv320aic3204_IN1_DigitalVolume(st_vol); 

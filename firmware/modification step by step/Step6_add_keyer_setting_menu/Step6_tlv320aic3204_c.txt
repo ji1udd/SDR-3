@@ -1,0 +1,15 @@
+//----------------------------------------------------------------------
+// tlv320aic3204 ‚Ì IN1 Digital Volume Control
+//  Volume : 0 (Min) - 117(Max)
+//----------------------------------------------------------------------
+void tlv320aic3204_IN1_DigitalVolume( int vol ) {
+  uint8 att ;
+  att = (uint8) (117 - vol) ;
+
+  uint8 reg[6] = { 
+    0,  1,     // page1
+    22, att,   // IN1L Volume
+    23, att,   // IN1R Volume
+  };
+  reg_setting( reg, 6 );
+}

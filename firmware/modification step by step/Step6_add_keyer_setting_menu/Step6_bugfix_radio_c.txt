@@ -1,0 +1,1 @@
+iir_ssb4th_fs48k.coeff = ((mod==0)||(mod==3))? (float *)iir_ssb4th_lpf_fs48k_coeff: (float *)iir_ssb4th_hpf_fs48k_coeff;  // LSB:LPF USB:HPF
