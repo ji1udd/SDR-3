@@ -1,0 +1,11 @@
+static void set_keyer_type( int rot );
+
+
+#define N_SETTINGS  (13)       // İ’è€–Ú”
+
+
+{ "13.Keyer          ", set_keyer_type  },  // 
+
+
+N_KEYTYPE,            //
+

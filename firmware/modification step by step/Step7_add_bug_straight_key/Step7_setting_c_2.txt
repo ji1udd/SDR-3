@@ -1,0 +1,8 @@
+//--------------------------------------------------------------------
+// iambic keyer ÇÃ Key Type ÇÃêÿÇËë÷Ç¶    0: straight, 1: iambic
+//--------------------------------------------------------------------
+static void set_keyer_type( int rot ) {
+  keytype += rot;
+  keytype &= 1;
+  strcopy( keytype?"iambic":"bug/st", setting_buttons[N_KEYTYPE%N_ITEMS].str+12 ); //
+}
