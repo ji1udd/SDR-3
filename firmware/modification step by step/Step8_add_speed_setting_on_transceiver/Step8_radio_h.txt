@@ -1,0 +1,3 @@
+extern int keyer_speed ;
+extern int DotTime ;
+extern int DashTime ;

@@ -1,0 +1,10 @@
+            if( cw_ptt_on ) {                 // keyer動作中なら
+              set_keyer_speed_on_trx( rot );  //  speed を変更
+            } else if( txtestmode ) { // 送信テスト　オーディオ周波数
+
+
+
+
+              case 2: // Keyer speed
+                set_keyer_speed_on_trx( rot );  // speed を変更
+                break;

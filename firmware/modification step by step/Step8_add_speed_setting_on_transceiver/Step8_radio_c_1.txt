@@ -1,0 +1,19 @@
+//--------------------------------------------------------------------
+// iambic keyer のスピード設定
+//--------------------------------------------------------------------
+static void set_keyer_speed_on_trx( int rot ) {
+  char str[20];
+  char *s = str;
+
+  keyer_speed += rot;
+  if (keyer_speed < 10) { // 上下限リミット処理
+    keyer_speed = 10;
+  } else if ( keyer_speed > 40 ) {
+    keyer_speed = 40;
+  }
+  DotTime = 1200 / keyer_speed ; // WPM -> Time変換
+  DashTime = DotTime * 3 ;
+  s = strcopy( "SPD:", s );
+  dec2str_s( keyer_speed, s , 2 );
+  gui_popup_show_time( str, MAX(popuptime_default,GUI_POPUP_SHORTTIME) );
+}
