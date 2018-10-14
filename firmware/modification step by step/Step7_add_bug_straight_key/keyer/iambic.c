@@ -81,10 +81,14 @@ void iambic( void ) {
       if ( !dashon ) {
         dashcnt++ ;
         if ( dashcnt > RejectTime) dashon = 1 ;
+      } else {
+        dashcnt =  RejectTime ;
       }
     } else if ( dashon ) {
       dashcnt-- ;
       if ( dashcnt == 0 ) dashon = 0 ;
+    } else {
+      dashcnt = 0 ;
     }
   }
 
@@ -94,11 +98,8 @@ void iambic( void ) {
         state = STATE_DOT_PRE ;
         state_delay = RELAY_DLY ;
       } else if ( dashon ) {
+        state = STATE_DASH_PRE ;
         state_delay = RELAY_DLY ;
-        if ( keytype )
-          state = STATE_DASH_PRE ;  // 1: iambic
-        else
-          state = STATE_DASH_ON ;   // 0: straight
       }
       break ;
 
