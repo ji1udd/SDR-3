@@ -1,0 +1,9 @@
+int cw_pitch_freq = 600 ;
+static void freq_update( void ) {
+  static int i2c_error = 0;
+  int offset = 0;                        // 180930
+  if( tx==0 ) {                          // CWモード時の受信周波数オフセット処理
+    if( mod==3 )                         // CWLなら、
+      offset =  cw_pitch_freq;           // ローカル周波数を上側にする
+    else if ( mod==4 )                   // CWUなら、
+      offset = -cw_pitch_freq;           // ローカル周波数を下側にする

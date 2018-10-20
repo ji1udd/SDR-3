@@ -1,0 +1,2 @@
+      cw_pitch_freq    = *adrs++;
+      beep_port_init();

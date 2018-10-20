@@ -1,0 +1,2 @@
+void beep_port_init( void );
+extern int cw_pitch_freq;

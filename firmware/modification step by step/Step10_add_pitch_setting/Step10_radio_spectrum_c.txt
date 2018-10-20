@@ -1,0 +1,4 @@
+    int hi_pitch = (mod==3)? -cw_pitch_freq/sp_freq_bin-1 + SP_W/2 : // CWL
+                              cw_pitch_freq/sp_freq_bin+1 + SP_W/2;  // CWU
+    if ((mod==3)||(mod==4))
+      if( x==hi_pitch ) color = C16_RED ;

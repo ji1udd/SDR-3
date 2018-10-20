@@ -1,0 +1,3 @@
+#define BEEP_TIM_DIV_NUM   (SYSTEMCORECLOCK/BEEP_TIM_PRESCALER)             // SidoTone PMW 設定値計算の分子
+void beep_port_init( void ) {
+int  BEEP_TIM_DIV = BEEP_TIM_DIV_NUM / cw_pitch_freq ;                      // SideTone PWM 設定値計算

@@ -1,0 +1,13 @@
+//--------------------------------------------------------------------
+// CW Tone é¸îgêîê›íË
+//--------------------------------------------------------------------
+static void set_keyer_pitch ( int rot ) {
+  cw_pitch_freq += (rot * 10);
+  if (cw_pitch_freq < 500) { // è„â∫å¿ÉäÉ~ÉbÉgèàóù
+    cw_pitch_freq = 500;
+  } else if ( cw_pitch_freq > 800 ) {
+    cw_pitch_freq = 800;
+  }
+  beep_port_init();
+  dec2str_s( cw_pitch_freq, setting_buttons[N_CWPITCH%N_ITEMS].str+15, 3 );
+}

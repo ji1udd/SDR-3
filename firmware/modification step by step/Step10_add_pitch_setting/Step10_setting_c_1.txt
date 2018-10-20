@@ -1,0 +1,12 @@
+static void set_keyer_pitch ( int rot );
+
+
+#define N_SETTINGS  (14)       // İ’è€–Ú”
+
+
+
+  { "14.CW Pitch       ", set_keyer_pitch  },  // 
+
+
+
+  N_CWPITCH,            //
