@@ -1,0 +1,5 @@
+static void hpf_setting( void ) {
+  hpf =  menus[N_MENU_HPF].sel;
+  radio_tx_rx_iir_hpf( hpf );
+  mod_setting();
+}

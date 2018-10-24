@@ -1,0 +1,2 @@
+    int hi_pitch = (mod==3)? -cw_pitch_freq/sp_freq_bin + SP_W/2 : // CWL
+                              cw_pitch_freq/sp_freq_bin + SP_W/2;  // CWU

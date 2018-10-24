@@ -1,0 +1,15 @@
+      if( ((mod==3)||(mod==4))&&(lpf<5) ) {   // CWモード かつ LPF 600,700,800,900,1000Hz を選択の場合、
+        iir_n( &iir_lpf_8th_fs12k, &isig );   // 8次 IIR LPFを使用
+      }else{
+        iir_n( &iir_lpf_fs12k, &isig );   // 帯域制限 LPF
+      }
+
+
+
+
+
+        if( (mod==3)||(mod==4) ) {             // CWモード時、
+          iir_n( &iir_hpf_8th_fs12k, &isig );  // 8次 IIR HPFを使用
+        }else{
+          iir_n( &iir_hpf_fs12k, &isig );   // 帯域制限 HPF fc=200
+        }

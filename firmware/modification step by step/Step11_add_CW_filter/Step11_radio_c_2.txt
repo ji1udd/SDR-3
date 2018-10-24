@@ -1,0 +1,8 @@
+  int hfc = hpf_val[hpf];
+  if( probe_cur==0 ) {          // デフォールト表示のときのみハイライト表示する
+    switch( mod ) {
+      case 0:  spectrum_set_highlight( -fc,-10 ); break;  // LSB
+      case 1:  spectrum_set_highlight(  10, fc ); break;  // USB
+      case 2:  spectrum_set_highlight( -fc, fc ); break;  // AM 
+      case 3:  spectrum_set_highlight( -fc,-hfc); break;  // CW(LSB), 180930追加
+      case 4:  spectrum_set_highlight( hfc,  fc); break;  // CW(USB), 180930追加

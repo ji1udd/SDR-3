@@ -1,0 +1,11 @@
+  iir_init( &iir_hpf_8th_fs12k, iir_hpf_8th_fs12k_buf, (float *)iir_hpf_8th_fs12k_coeff[0], 4 ); // RX CW IIR ‘Ñˆæ§ŒÀHPF 8Ÿ fs=12k
+  iir_init( &iir_lpf_8th_fs12k, iir_lpf_8th_fs12k_buf, (float *)iir_lpf_8th_fs12k_coeff[0], 4 ); // RX CW IIR ‘Ñˆæ§ŒÀLPF 8Ÿ fs=12k
+
+
+
+  iir_hpf_8th_fs12k.coeff = (float *)iir_hpf_8th_fs12k_coeff[ sel ]; // 8ŸHPF ŒW”•ÏX fs=12k
+
+
+
+
+  iir_lpf_8th_fs12k.coeff = (float *)iir_lpf_8th_fs12k_coeff[ sel % 5 ]; // 8ŸLPF ŒW”•ÏX fs=12k CW—p5í—Ş
