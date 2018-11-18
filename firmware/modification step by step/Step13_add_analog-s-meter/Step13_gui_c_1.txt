@@ -1,0 +1,2 @@
+  { 2, 20, 239-190, 280, 50, 0xE8, C16_EMERALD_5, C16_BLACK, 24, "", str_popup, 0 }; // cˆÊ’u‚Æc•‚ð•ÏX
+  

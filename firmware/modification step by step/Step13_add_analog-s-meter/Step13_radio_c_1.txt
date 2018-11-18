@@ -1,0 +1,63 @@
+//--------------------------------------------------------------------
+// アナログ Sメーター
+//--------------------------------------------------------------------
+#define s_meter_origin_x  270        // Sメーターの指針の原点座標
+#define s_meter_origin_y   60
+
+// 指針および目盛り線の描画
+void analog_s_meter ( int s, int r1, int r2, int color ) { // s:dBu r1:外側 r2:内側
+  int x0, y0, x1, y1 ;
+  float cos, sin ;
+
+  if ( s < -14 )                     // Sメーター用 dBu値 の上下限リミット処理
+    s = -14 ;
+  else if ( s > 100 )
+    s = 100 ;
+
+  s = (100-s) * 108 / 114 + 126 ;    // -14dBu は 144度、100dBuは 36度に変換、更にcos_tblに合うように90度を加算
+  s = (s * 512 / 180 + 1) / 2  ;     // cos_tbl引数に変換、その際に小数点1桁での丸め処理を行う    126 = 36 + 90
+
+  cos = cos_tbl[s] ;
+  sin = cos_tbl[s+128] ;
+  x0 = s_meter_origin_x - (int)( sin * r1 ) ;
+  y0 = s_meter_origin_y + (int)( cos * r1 ) ;
+  x1 = s_meter_origin_x - (int)( sin * r2 ) ;
+  y1 = s_meter_origin_y + (int)( cos * r2 ) ;
+  lcd_draw_line( x0, y0, x1, y1, color ) ;
+}
+
+// スケールの描画
+void analog_s_meter_arc ( int s1, int s2, int r, int color ) {
+  int i, j, x, y ;
+  float cos, sin ;
+
+  for (i=s1; i<s2; i++) {
+    j = (i * 512 / 180 + 1) / 2 ;   // cos_tbl引数に変換、その際に小数点1桁での丸め処理を行う
+    cos = cos_tbl[j] ;
+    sin = cos_tbl[j+128] ;
+    x = s_meter_origin_x - (int)( sin * r ) ;
+    y = s_meter_origin_y + (int)( cos * r ) ;
+    lcd_draw_pixel( x, y, color );
+  }
+}
+
+// 文字盤の描画
+void analog_s_meter_frame (void) {
+  analog_s_meter(  -8, 46, 42, C16_WHITE ) ; // S1  目盛り線
+  analog_s_meter(   4, 46, 42, C16_WHITE ) ; // S3
+  analog_s_meter(  16, 46, 42, C16_WHITE ) ; // S5
+  analog_s_meter(  28, 46, 42, C16_WHITE ) ; // S7
+  analog_s_meter(  40, 46, 42, C16_WHITE ) ; // S9
+  analog_s_meter(  60, 46, 42, C16_RED )   ; // S9+20dB
+  analog_s_meter(  80, 46, 42, C16_RED )   ; // S9+40dB
+  analog_s_meter( 100, 46, 42, C16_RED )   ; // S9+60dB
+  lcd_draw_str( 224, 22, "1", 8, C16_WHITE, C_RA_BG ); // S1  目盛り数値
+  lcd_draw_str( 233, 15, "3", 8, C16_WHITE, C_RA_BG ); // S3
+  lcd_draw_str( 244,  9, "5", 8, C16_WHITE, C_RA_BG ); // S5
+  lcd_draw_str( 255,  6, "7", 8, C16_WHITE, C_RA_BG ); // S7
+  lcd_draw_str( 266,  4, "9", 8, C16_WHITE, C_RA_BG ); // S9
+  lcd_draw_str( 278,  6, "+20", 8, C16_RED, C_RA_BG ); // S9+20dB
+  lcd_draw_str( 295, 15, "+40", 8, C16_RED, C_RA_BG ); // S9+40dB
+  analog_s_meter_arc( 126, 235, 41, C16_WHITE ) ; // 全体スケール白
+  analog_s_meter_arc( 126, 181, 43, C16_RED )   ; // Over 9 スケール赤
+}

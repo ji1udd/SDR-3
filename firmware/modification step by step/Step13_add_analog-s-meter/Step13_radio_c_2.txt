@@ -1,0 +1,22 @@
+  // アナログ S メーター
+  if ( diff != 0 ) {                             // s と s_old に差があるなら更新する
+    analog_s_meter( s_old, 48, 24, C16_BLACK ) ; // 古い指針を消す
+    analog_s_meter_frame() ;                     // 文字盤を描画
+    analog_s_meter( s, 48, 24, C16_WHITE ) ;     // 新しい指針を描画
+  }
+
+  s_old = s;
+  
+  char   str[10];
+  dec2str_s( s, str, 3 );
+  int x = 242;
+  int y = 38 ;
+  lcd_draw_str( x,      y,   str,   8, C_RA_SIGNAL_STR, C_RA_BG );  // 数値を font8 で表示
+  lcd_draw_str( x+8*3,  y,   "dBu", 8,  C_RA_SIGNAL_STR, C_RA_BG ); // dBu を font8 で表示
+  
+
+(途中省略）
+
+
+  memorycopy( menu_freqstep.str+MENUITEM_NSTR*menu_freqstep.sel, str_setting[8], 5 ); // F.Stepの表示値を str_setting[8]に設定
+  gui_update_button( 15 );  // F.Stepボタンを再表示

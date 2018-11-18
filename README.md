@@ -84,3 +84,26 @@
 - CW送信波の帯域幅の広がりを改善
 - CW送信波の立ち上がり/立ち下り時間を従来の 5.3ms(fs=12kHz 64サンプル分)から、8ms (96サンプル分)に変更。
 - Step12では、keyerフォルダ内容の変更はなし
+
+### Step13:
+- トランシーバー画面の変更。内容は下記。
+- アナログタイプのSメーター表示を追加
+- F.Step表示の追加
+- 上記に伴い、他のメニュー項目の表示の小サイズ化
+- Step13では、keyerフォルダ内容の変更はなし
+
+
+## その他
+### Appendix1:
+- 付録DVD-ROMのソースに対して、main20180812.hex の settingメニューで "Freq Popup"を "OFF" にしたのと同じ動作にするための修正箇所。
+- radio.c の radio_rotaryenc 中の 4箇所をコメントアウトする。
+
+              case 0:                   // Frequency
+                if( (rot>=ACCEL_TH) || (rot<=-ACCEL_TH) ) rot *= ACCEL;   // 加速
+                freq_setting( freq + rot*freqstep );                          //
+//                if( popuptime_default ) {
+//                  gui_popup_show( str_freq ); // 周波数をポップアップで表示
+//                }else{
+                  gui_update();
+//                }
+                break;

@@ -1,0 +1,41 @@
+  { 0, 5, "MOD        ", " LSB  USB   AM  CWL  CWU  PSK ", func_mod },// 変復調モード
+  { 2, 5, "AGC        ", "Slw1 Slw2  Mid Fst1 Fst2 ", func_agc },// AGC
+  { 2, 5, "RX GAIN    ", "-20\140 -10\140   0\140 +10\140 +20\140 ", func_rfgain},// RFゲイン
+  { 2, 6, "TX GAIN    ", " -3\140   0\140  +3\140  +6\140 +10\140 +20\140 ", func_txgain},// TXゲイン
+  { 9,13, "LPF        ", " 600  700  800  900   1k 2.2k 2.4k 2.6k 2.8k   3k 3.5k   4k   5k ", func_lpf },// LPF
+  { 1, 6, "HPF        ", "  50  100  200  300  400  500 ", func_hpf },   // HPF
+  { 0,10, "DENOISER   ", " Off   L1   L2   L3   M1   M2   M3   H1   H2   H3 ", func_noican },// NOISE CANCELLER
+  { 0,11, "PSD STEREO ", " Off  1ms  2ms  3ms  4ms  5ms  6ms  7ms  8ms  9ms 10ms ", func_pseudostereo },  // PSEUDO STEREO
+  { 4, 6, "AUDIO LO   ", "-20\140 -10\140  -6\140  -3\140   0\140  +3\140 ", func_audiolo },// Lo
+  { 4, 6, "AUDIO HI   ", "-20\140 -10\140  -6\140  -3\140   0\140  +3\140 ", func_audiohi },// Hi
+  { 4, 7, "SPEANA REF ", " 50\140  60\140  70\140  80\140  90\140 100\140 110\140 ", func_speanaref},// スペアナ REF
+  { 0, 3, "SSB METHOD ", "PHAS WEAV  4TH ", func_ssbmethod },
+};
+enum {
+  N_MENU_MOD,           // 変復調モード
+  N_MENU_AGC,           // AGC
+  N_MENU_RXGAIN,        // RF ゲイン
+  N_MENU_TXGAIN,        // TX ゲイン
+
+  N_MENU_LPF,           // LPF
+  N_MENU_HPF,           // HPF
+  N_MENU_DENOISER,      // NOISE CANCELLER
+  N_MENU_PSDSTEREO,     // PSEUDO STEREO
+
+  N_MENU_LOW,           // Lo
+  N_MENU_HIGH,          // Hi
+  N_MENU_SPREF,         // スペアナ REF
+  N_MENU_SSBMETHOD,     // SSB METHOD
+  
+  N_MENU,               // メニュー個数
+};
+
+static const int   lpf_val[]          = { 600, 700, 800, 900, 1000, 2200, 2400, 2600, 2800, 3000, 3500, 4000, 5000 };  // FIR_LPFの値
+static const int   hpf_val[]          = { 50, 100, 200, 300, 400, 500 };  // IIR_HPFの値
+static const float agc_am_rise_val[5] = { 0.5f, 0.5f, 0.7f, 0.8f, 0.8f }; // AGC 立ち上がり時定数(ゲインが下がる方向)
+static const float agc_am_fall_val[5] = { 0.002f, 0.005f, 0.01f, 0.02f, 0.05f }; // AGC 立ち下がり時定数(ゲインが上がる方向)
+static const float agc_ssb_rise_val[5] = { 0.5f, 0.5f, 0.7f, 0.8f, 0.8f }; // AGC 立ち上がり時定数(ゲインが下がる方向)
+static const float agc_ssb_fall_val[5] = { 0.0002f, 0.0005f, 0.001f, 0.01f, 0.02f }; // AGC 立ち下がり時定数(ゲインが上がる方向)
+static const int   txgain_val[6] = { -6, -3,  0,  3,  7, 17 };// TXゲイン 0dB設定で-3dB
+
+static char str_setting[9][6];

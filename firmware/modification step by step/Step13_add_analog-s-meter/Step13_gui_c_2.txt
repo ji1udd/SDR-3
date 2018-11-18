@@ -1,0 +1,9 @@
+      int margin = ( button->w - button->size * slen ) - 5 ;  // 右揃え＆右側マージン 5dot
+      if( margin > 0 ) x += margin; // margin が負になるということは文字数が多いということ なので何らかの対応をすべき。　このままだと右にはみ出るか、改行があれば下にはみ出る。
+      y = button->y + ( button->h - button->size )/2;
+      if( *(button->title) ) {  // タイトル文字列があるなら
+        lcd_draw_str( button->x+1, button->y+1, button->title, 8, title_color, color2 );
+        if( (button->h - button->size) > 8 ) y += 4;
+        else y = button->y + button->h - button->size;  //
+      }
+      lcd_draw_str( x, y-1, button->str, button->size, color1, color2 ); // Y位置を調整(-1)

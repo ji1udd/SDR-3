@@ -1,0 +1,41 @@
+static button_t radio_buttons[] = {   // 使うボタンをすべてここで定義する
+//  status        bit0:使用中  bit1:表示   bit2:コールバック
+//  x             左上　Ｘ座標
+//  y             左上　Ｙ座標
+//  w             幅
+//  h             高さ 
+//  style;        ボタンスタイル 上位２ビット　0:rect 1:cut 2:round 3:circle　下位６ビットはそれぞれの半径やコーナーなど
+//  color_button  ボタン色
+//  color_str     文字列色
+//  size          文字サイズ 8, 16, 24
+//  title         タイトル文字列
+//  str           ボタン文字列
+//  func          選択時に呼び出される関数へのポインタ
+  { 7,  0,  0, 108, 15, 0, C_RA_BTN, C_RA_STR, 12, "MODE", str_setting[0], func_buttons },// 設定０
+  { 7,110,  0, 108, 15, 0, C_RA_BTN, C_RA_STR, 12, "AGC", str_setting[1], func_buttons },// 設定４
+  { 7,  0, 16, 108, 15, 0, C_RA_BTN, C_RA_STR, 12, "RxGAIN", str_setting[2], func_buttons },// 設定２
+  { 7,110, 16, 108, 15, 0, C_RA_BTN, C_RA_STR, 12, "TxGAIN", str_setting[3], func_buttons },// 設定１
+  { 7,  0, 32, 108, 15, 0, C_RA_BTN, C_RA_STR, 12, "LPF", str_setting[4], func_buttons },// 設定３
+  { 7,110, 32, 108, 15, 0, C_RA_BTN, C_RA_STR, 12, "HPF", str_setting[5], func_buttons },// 設定３
+  { 7,  0, 48, 108, 15, 0, C_RA_BTN, C_RA_STR, 12, "DENOISE", str_setting[6], func_buttons },// 設定５
+  { 7,110, 48, 108, 15, 0, C_RA_BTN, C_RA_STR, 12, "STEREO", str_setting[7], func_buttons },// 設定５
+  { 1,  0, 71, 48, 24, 0, C_RA_TX_BG, C_RA_TX_STR, 24, "", "TX", func_default },// 送信
+  { 1, 48, 71, 32, 24, 0, C_RA_FREQ_BTN, C_RA_FREQ_STR, 12, "", "B", func_default },// BAND 表示
+  { 7, 80, 71,240, 24, 0, C_RA_FREQ_BTN, C_RA_FREQ_STR, 24, "", str_freq,func_default     },// 周波数
+  { 0, 48, 71, 64, 24, 0, C_RA_MEMORY_BTN, C_RA_MEMORY_STR1, 24, "", str_memory, func_default },// ch メモリー
+  { 0,112, 71, 48, 24, 0, C_RA_MEMORY_BTN, C_RA_MEMORY_STR2, 12, "", "B", func_default },// BAND 表示
+  { 0,160, 71,160, 24, 0, C_RA_MEMORY_BTN, C_RA_MEMORY_STR2, 16, "", str_freq,func_default     },// ch メモリー時の周波数
+  { 4,  0,105,320,100, 0, C_RA_BTN, C_RA_STR,  16, "", "",   func_default },// スペクトラム表示
+  { 7,220, 48, 108, 15, 0, C_RA_BTN, C_RA_STR, 12, "FStep", str_setting[8], func_default },// Freq Step 表示
+};
+
+static int n_main_buttons = (sizeof radio_buttons)/(sizeof radio_buttons[0]); // ラジオ画面のボタン個数
+
+#define N_BUTTON_TRX      (8)       // TX/RX ボタン
+#define N_BUTTON_BAND     (9)       // BAND ボタン
+#define N_BUTTON_FREQ     (10)       // FREQ ボタン
+#define N_BUTTON_MEMORY   (11)       // MEMORY ボタン
+#define N_BUTTON_CHBAND   (12)       // BAND ボタン（ch メモリー時）
+#define N_BUTTON_CHFREQ   (13)       // FREQ ボタン（ch メモリー時）
+
+static const int menu_sel_tbl[8] = { N_MENU_MOD, N_MENU_AGC, N_MENU_RXGAIN, N_MENU_TXGAIN, N_MENU_LPF, N_MENU_HPF, N_MENU_DENOISER, N_MENU_PSDSTEREO } ; // 画面ボタンとメニューの対応
