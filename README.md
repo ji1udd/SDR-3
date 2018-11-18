@@ -98,12 +98,14 @@
 - 付録DVD-ROMのソースに対して、main20180812.hex の settingメニューで "Freq Popup"を "OFF" にしたのと同じ動作にするための修正箇所。
 - radio.c の radio_rotaryenc 中の 4箇所をコメントアウトする。
 
-              case 0:                   // Frequency
-                if( (rot>=ACCEL_TH) || (rot<=-ACCEL_TH) ) rot *= ACCEL;   // 加速
-                freq_setting( freq + rot*freqstep );                          //
-//                if( popuptime_default ) {
-//                  gui_popup_show( str_freq ); // 周波数をポップアップで表示
-//                }else{
-                  gui_update();
-//                }
-                break;
+   case 0:
+     if( (rot>=ACCEL_TH) || (rot<=-ACCEL_TH) ) rot *= ACCEL;
+     freq_setting( freq + rot*freqstep );
+//   if( popuptime_default ) {
+//     gui_popup_show( str_freq );
+//   }else{
+       gui_update();
+//   }
+     break;
+
+
