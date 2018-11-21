@@ -7,3 +7,5 @@
         else y = button->y + button->h - button->size;  //
       }
       lcd_draw_str( x, y-1, button->str, button->size, color1, color2 ); // Y位置を調整(-1)
+    }else{  // 非表示なので背景色
+      lcd_draw_rectfill( x, y-1, w, h+1, bg_color ); // Y位置を調整(-1)、Y高さを調整(+1)
