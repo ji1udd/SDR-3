@@ -1,0 +1,1 @@
+    lcd_draw_pic( 224, 0, 319, 46, smeter_pattern_size, smeter_pattern ); // 矩形領域(224,0)-(319,46)にメーターパネルを描画
