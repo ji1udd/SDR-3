@@ -95,7 +95,7 @@
 ### Step14:
 - Sメーターの文字盤の描画方法を変更
 - 横96ドット×縦47ドットのビットマップデータを使用してSメーターの文字盤を描画
-- 文字盤のビットマップデータ作成ツールとしてExcelシートを使用 [_Excelシート_](firmware/S-meter Panel Data Generator/s-meter-panel_data_generator.xls)
+- 文字盤のビットマップデータ作成ツールとしてExcelシートを使用 (firmware/S-meter Panel Data Generator/s-meter-panel_data_generator.xls)
 - Step14では、keyerフォルダ内容の変更はなし
 
 ## その他
