@@ -1,0 +1,9 @@
+  const int n=32;                   // 32 word‚ÉŠg’£
+    uint32 data[32];
+    for( int i=0; i<32; i++ ) data[i]=0xFFFFFFFF;
+
+
+
+    *pdata++ = s_meter_type ;
+    *pdata++ = s_meter_npcolor ;
+    *pdata++ = s_meter_needle ;

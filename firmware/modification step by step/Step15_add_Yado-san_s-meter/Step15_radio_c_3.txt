@@ -1,0 +1,8 @@
+    if ( s_meter_type==0 ) {                                                 // Sメーター TYPE0
+      lcd_draw_pic( 224, 0, 319, 46, smeter_pattern_size, smeter_pattern  ); // 矩形領域(224,0)-(319,46)にメーターパネルを描画
+      analog_s_meter( s, 48, 24, s_meter_ncolor ) ;                           // 新しい指針を描画
+
+    } else {                                                                 // Sメーター TYPE1(やどさん作)
+      lcd_draw_pic( 224, 0, 319, 46, smeter_pattern_size, smeter_pattern1 );
+      analog_s_meter_type2( s, s_meter_needle, s_meter_ncolor  ) ;
+    }

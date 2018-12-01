@@ -1,0 +1,3 @@
+extern int s_meter_type;
+extern int s_meter_ncolor;
+extern int s_meter_needle;

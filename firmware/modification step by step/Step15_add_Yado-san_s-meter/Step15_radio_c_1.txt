@@ -1,0 +1,22 @@
+#define s_meter_type2_origin_y 24                // Sメーターパネル TYPE1用
+void analog_s_meter_type2 ( int s, int s_meter_needle, int color ) {
+  int x0, y0, x1, y1 ;
+
+  if ( s < -14 )                     // Sメーター用 dBu値 の上下限リミット処理
+    s = -14 ;
+  else if ( s > 100 )
+    s = 100 ;
+                             
+  s = s * 0.8158 + 236.4 ;           // -14dBu は 225、100dBuは 318に変換
+  x0 = s ;
+  y0 = s_meter_type2_origin_y ;
+  x1 = s ;
+  y1 = s_meter_type2_origin_y + 13 ;
+  lcd_draw_line( x0, y0, x1, y1, color ) ;
+  if ( s_meter_needle !=0 ) lcd_draw_line( x0-1, y0, x1-1, y1, color ) ;
+}
+
+
+// Sメーターパネルデーター
+#define smeter_pattern_size  282
+const int smeter_pattern[smeter_pattern_size]= {

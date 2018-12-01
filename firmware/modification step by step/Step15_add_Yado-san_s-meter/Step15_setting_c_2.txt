@@ -1,0 +1,43 @@
+//--------------------------------------------------------------------
+// S-Meter Type選択
+//--------------------------------------------------------------------
+static void set_smeter_type ( int rot ) {
+  s_meter_type += rot;
+  s_meter_type &= 1;
+  dec2str_s( s_meter_type, setting_buttons[N_SMTYPE%N_ITEMS].str+17, 1 );
+}
+
+//--------------------------------------------------------------------
+// S-Meter 指針の色の選択 (8色)
+//--------------------------------------------------------------------
+static char str_smeter_ncolor[5] ;               // S-Meter Needle color
+static void set_smeter_ncolor ( int palette ) {
+  switch (palette) {
+    default:
+    case 0 : s_meter_ncolor = C16_WHITE   ; strcopy("WHT",str_smeter_ncolor) ; break ;
+    case 1 : s_meter_ncolor = C16_BLUE    ; strcopy("BLU",str_smeter_ncolor) ; break ;
+    case 2 : s_meter_ncolor = C16_RED     ; strcopy("RED",str_smeter_ncolor) ; break ;
+    case 3 : s_meter_ncolor = C16_GREEN   ; strcopy("GRN",str_smeter_ncolor) ; break ;
+    case 4 : s_meter_ncolor = C16_CYAN    ; strcopy("CYN",str_smeter_ncolor) ; break ;
+    case 5 : s_meter_ncolor = C16_MAGENTA ; strcopy("MAG",str_smeter_ncolor) ; break ;
+    case 6 : s_meter_ncolor = C16_YELLOW  ; strcopy("YEL",str_smeter_ncolor) ; break ;
+    case 7 : s_meter_ncolor = C16_BLACK   ; strcopy("BLK",str_smeter_ncolor) ; break ;
+  }
+}
+
+static int s_meter_npcolor = 0 ;                 // S-Meter Needle palette
+static void set_smeter_npcolor ( int rot ) {
+  s_meter_npcolor += rot;
+  s_meter_npcolor &= 7;
+  set_smeter_ncolor(s_meter_npcolor);
+  strcopy( str_smeter_ncolor, setting_buttons[N_SMNCOLOR%N_ITEMS].str+15);
+}
+
+//--------------------------------------------------------------------
+// S-Meter 指針の太さ(Bold) 選択
+//--------------------------------------------------------------------
+static void set_smeter_nbold ( int rot ) {
+  s_meter_needle += rot;
+  s_meter_needle &= 1;
+  strcopy( s_meter_needle?"Yes":" No", setting_buttons[N_SMNBOLD%N_ITEMS].str+15);
+}

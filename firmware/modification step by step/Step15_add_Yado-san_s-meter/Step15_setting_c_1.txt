@@ -1,0 +1,19 @@
+static void set_smeter_type ( int rot );
+static void set_smeter_npcolor ( int rot );
+static void set_smeter_nbold ( int rot );
+
+
+
+#define N_SETTINGS  (17)       // 設定項目数
+
+
+
+  { "15.SM Type        ", set_smeter_type  },    // Sメーターパネル種類選択
+  { "16.SM N Color     ", set_smeter_npcolor },  // Sメーター指針の色選択
+  { "17.SM N Bold      ", set_smeter_nbold },    // Sメーター指針のBold選択(パネルタイプ0は非対応)
+
+
+
+  N_SMTYPE,
+  N_SMNCOLOR,
+  N_SMNBOLD,

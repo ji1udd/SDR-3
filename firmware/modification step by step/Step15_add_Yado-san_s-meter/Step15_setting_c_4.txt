@@ -1,0 +1,8 @@
+  const int n=32;               // 32 word‚ÉŠg’£
+
+
+
+      s_meter_type     = *adrs++;
+      s_meter_npcolor  = *adrs++;
+      set_smeter_ncolor(s_meter_npcolor);
+      s_meter_needle   = *adrs++;
