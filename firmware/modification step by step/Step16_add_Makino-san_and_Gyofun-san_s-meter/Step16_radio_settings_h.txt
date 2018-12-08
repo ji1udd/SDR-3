@@ -1,0 +1,2 @@
+static void disp_signal_level( int enable );
+static void disp_smeter( int s ) ;

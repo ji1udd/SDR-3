@@ -1,0 +1,5 @@
+  if ( s_meter_type > 3) {
+    s_meter_type=3;
+  } else if ( s_meter_type <0 ) {
+    s_meter_type=0 ;
+  }

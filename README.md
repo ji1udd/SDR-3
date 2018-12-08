@@ -106,6 +106,13 @@
 - タイプ1にコールサインや愛称などを表示したい場合は、Excelシート(s-meter-panel_data_generator_r1(やどさん作).xls)を使用する。フリーハンドで文字を描いても良いが、font8.cを参考にすると他部分と文字デザインが統一できる。
 - Step15では、keyerフォルダ内容の変更はなし
 
+### Step16:
+- Sメーターの種類として 更に2タイプが追加。合計4タイプ。
+- タイプ2は、まきのさんデザイン。Excelシートは、s-meter-panel_data_generator_r1(まきのさん版).xls (BBSの書き込み情報を元にやどさん作のExcelファイルを小変更して作成)
+- タイプ3は、ぎょふんさんデザイン。Excelシートは、s-meter-panel_data_generator_r2(ぎょふんさん作).xls
+- タイプ3の場合は、settingメニューで Needle bold を指定すると通常のバー表示にできる。
+- ExcelシートのC言語用配列データの生成式に誤りがあった。gitにuploadしてある全てのExcelシートを修正
+- Step16では、keyerフォルダ内容の変更はなし
 
 ## その他
 ### Appendix1:

@@ -1,0 +1,193 @@
+TYPE3のパネルデータに続けて、
+「F.Step をロータリーエンコーダーで変える」の手前までを
+下記で置き換えてください。
+
+
+//--------------------------------------------------------------------
+// アナログ Sメーター 指針の描画
+//--------------------------------------------------------------------
+#define s_meter_origin_x  270        // Sメーターの指針の原点座標
+#define s_meter_origin_y   60
+
+// 指針および目盛り線の描画
+void analog_s_meter ( int s, int r1, int r2, int color ) { // s:dBu r1:外側 r2:内側
+  int x0, y0, x1, y1 ;
+  float cos, sin ;
+
+  if ( s < -14 )                     // Sメーター用 dBu値 の上下限リミット処理
+    s = -14 ;
+  else if ( s > 100 )
+    s = 100 ;
+
+  s = (100-s) * 108 / 114 + 126 ;    // -14dBu は 144度、100dBuは 36度に変換、更にcos_tblに合うように90度を加算
+  s = (s * 512 / 180 + 1) / 2  ;     // cos_tbl引数に変換、その際に小数点1桁での丸め処理を行う    126 = 36 + 90
+
+  cos = cos_tbl[s] ;
+  sin = cos_tbl[s+128] ;
+  x0 = s_meter_origin_x - (int)( sin * r1 ) ;
+  y0 = s_meter_origin_y + (int)( cos * r1 ) ;
+  x1 = s_meter_origin_x - (int)( sin * r2 ) ;
+  y1 = s_meter_origin_y + (int)( cos * r2 ) ;
+  lcd_draw_line( x0, y0, x1, y1, color ) ;
+}
+
+
+#define s_meter_type1_origin_y 24                // Sメーターパネル TYPE1用 (やどさん作)
+void analog_s_meter_type1 ( int s, int s_meter_needle, int color ) {
+  int x0, y0, x1, y1 ;
+
+  if ( s < -14 )                     // Sメーター用 dBu値 の上下限リミット処理
+    s = -14 ;
+  else if ( s > 100 )
+    s = 100 ;
+                             
+  s = s * 0.8158 + 236.4 ;           // -14dBu は 225、100dBuは 318に変換
+  x0 = s ;
+  y0 = s_meter_type1_origin_y ;
+  x1 = s ;
+  y1 = s_meter_type1_origin_y + 13 ;
+  lcd_draw_line( x0, y0, x1, y1, color ) ;
+  if ( s_meter_needle !=0 ) lcd_draw_line( x0-1, y0, x1-1, y1, color ) ;
+}
+
+
+#define s_meter_type2_origin_y 24                // Sメーターパネル TYPE2用
+void analog_s_meter_type2 ( int s, int s_meter_needle, int color ) {
+  int x0, y0, x1, w0 ;
+
+  if ( s < -14 )                    // Sメーター用 dBu値 の上下限リミット処理
+    s = -14 ;
+  else if ( s > 100 )
+    s = 100 ;
+
+  s = (int)( s * 0.8158 + 236.9 ) ; // -14dBu は 225、100dBuは 318に変換
+  x1 = s - 224 ;                    // バーの長さ x1 = 1～94
+
+  // バー表示に隠れない部分(16dot単位)の目盛りの描画
+  int xoffset = (x1+1)/16 ;         // xoffset = 0 ～ 5
+  x0 = xoffset*16 + 224 ;           // x0 = 224, 240,..., 304
+  w0 = 6 - xoffset ;                // w0 = 6, 5,...1
+
+  const int * index ;
+  const int * index_base = smeter_pattern2 + xoffset ;
+  for ( y0=28 ; y0<35 ; y0++ ) {
+    index = index_base+(y0+1)*6 ;
+    lcd_draw_pic( x0, y0, 319, y0, w0, index );
+  }
+  index = smeter_pattern2+35*6 ;
+  lcd_draw_pic( 224, 34, 319, 34, 6, index );
+
+  // バー表示
+  x0 = 225 ;                        // xの原点 -14dBu
+  y0 = s_meter_type2_origin_y + 4 ; // yの原点
+  w0 = 6 ;                          // バーの幅
+  lcd_draw_rectfill( x0, y0, x1, w0, color ) ;
+}
+
+
+#define s_meter_type3_origin_y 24                // Sメーターパネル TYPE3用 (ぎょふんさん作)
+int bar_old = 225 ;
+void analog_s_meter_type3 ( int s, int s_meter_needle, int color ) {
+  int x0, y0, x1, y1 ;
+  int bar_sub ;                     //前回と今回のsの差
+  int bar_count ;                   //描画回数
+  int bar_patn ;
+
+  if ( s < -14 )                    // Sメーター用 dBu値 の上下限リミット処理
+    s = -14 ;
+  else if ( s > 100 )
+    s = 100 ;
+
+  s = s * 0.8158 + 236.4 ;          // -14dBu は 225、100dBuは 318に変換
+  y0 = s_meter_type2_origin_y + 6 ; //バーグラフの上辺
+  y1 = s_meter_type2_origin_y + 11; //バーグラフの下辺
+  if ( bar_old < 225 )  bar_old = 225 ;
+ 
+  //**************************  バーグラフ表示  ***************************
+  // 今回のs値と直前のs値(bar_old)が同じ場合は何もしない
+  // 今回のs値が直前のs値(bar_old)より大きい場合はバーグラフを左端から描画
+  if ( s > bar_old ) {
+    bar_sub = s - 224 ;             //バーグラフを左端から描画
+    bar_patn = (s_meter_needle == 0) ? 2 : 1 ;
+    for ( bar_count = 0 ; bar_count <= bar_sub ; bar_count += bar_patn ) {
+      lcd_draw_line ( 224 + 1 + bar_count, y0, 224 + 1+ bar_count, y1,  color ) ;
+    }
+  }
+
+  // 今回のs値が直前のs値(bar_old)より小さい場合は差分を消去
+  if ( s < bar_old ) {
+    bar_sub = bar_old - s; // 差分を消去する回数　消去の起点は前回のs値(bar_old)
+    for ( bar_count = 0 ; bar_count <= bar_sub ; bar_count++ ) {
+      lcd_draw_line ( bar_old + 1 - bar_count, y0, bar_old + 1 - bar_count, y1, C16_BLACK ) ;
+    }
+  }
+  bar_old = s ; // 今回のs値を直前のs値として記憶して次回比較対象とする
+}
+
+//--------------------------------------------------------------------
+// Sメーターのパネルと指針の描画 (s_meter_typeでタイプ指定)
+//--------------------------------------------------------------------
+static void disp_smeter( int s ) {
+//LED3_ON(); // 処理時間チェック用
+  switch ( s_meter_type ) {
+    default:                                                                        // Sメーター TYPE0
+    case 0: lcd_draw_pic( 224, 0, 319, 46, smeter_pattern_size, smeter_pattern  );  // 矩形領域(224,0)-(319,46)にメーターパネルを描画
+            analog_s_meter( s, 48, 24, s_meter_ncolor ) ;                           // 新しい指針を描画
+            break ;
+    case 1: lcd_draw_pic( 224, 0, 319, 37, smeter_pattern1_size, smeter_pattern1);  // Sメーター TYPE1(やどさん作)
+            analog_s_meter_type1( s, s_meter_needle, s_meter_ncolor  ) ;
+            break ;
+    case 2: lcd_draw_pic( 224, 0, 319, 27, smeter_pattern2_upper_size, smeter_pattern2);  // Sメーター TYPE2(まきのさん作)
+            analog_s_meter_type2( s, s_meter_needle, s_meter_ncolor  ) ;
+            break ;
+    case 3: lcd_draw_pic( 224, 0, 319, 27, smeter_pattern3_size, smeter_pattern3);  // Sメーター TYPE3(ぎょふんさん作)
+            analog_s_meter_type3( s, s_meter_needle, s_meter_ncolor  ) ;
+            break ;
+  }
+//LED3_OFF(); // 処理時間チェック用
+}
+
+//--------------------------------------------------------------------
+//  信号レベル表示
+//--------------------------------------------------------------------
+int s_meter_type   = 0 ;            // パネルタイプ選択
+int s_meter_ncolor = C16_WHITE ;    // 指針の色選択
+int s_meter_needle = 0 ;            // 指針のBold選択
+
+static void disp_signal_level( int enable ) {
+  if( probe_cur ) return; // 信号処理途中表示の時は信号レベル検出しない。
+  
+  static int s_old=0, diff_sum=0;
+  
+  int s = (enable==0) ? -99 : spectrum_get_siglevel();  // 受信信号レベル
+  int diff = s - s_old;
+  s = s_old;
+  if( diff>0 ) {
+    s +=  diff;  // ピーク表示にする
+    diff_sum = 0;
+  }else{
+    diff_sum += diff;
+    s +=  diff_sum/4;
+    diff_sum = diff_sum - (diff_sum/4)*4;
+  }
+  if( s < -99 ) s=-99;
+
+  // アナログ S メーター
+  if ( diff != 0 ) {                             // s と s_old に差があるなら更新する
+    disp_smeter( s ) ;
+  }
+
+  s_old = s;
+  
+  char   str[10];
+  dec2str_s( s, str, 3 );
+  int x = 242;
+  int y = 38 ;
+  lcd_draw_str( x,      y,   str,   8, C_RA_SIGNAL_STR, C_RA_BG );  // 数値を font8 で表示
+  lcd_draw_str( x+8*3,  y,   "dBu", 8,  C_RA_SIGNAL_STR, C_RA_BG ); // dBu を font8 で表示
+}
+
+
+//--------------------------------------------------------------------
+// F.Step をロータリーエンコーダーで変える
+//--------------------------------------------------------------------
