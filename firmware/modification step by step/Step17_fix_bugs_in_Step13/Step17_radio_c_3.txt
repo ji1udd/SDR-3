@@ -1,0 +1,1 @@
+              for( int i=0; i<6; i++ ) gui_update_button( i ); // POPUP ‚É‰B‚ê‚È‚¢ã•”‚Ìƒ{ƒ^ƒ“‚¾‚¯Ä•`‰æ

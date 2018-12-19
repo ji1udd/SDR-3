@@ -1,0 +1,1 @@
+  { 7,220, 48, 100, 15, 0, C_RA_BTN, C_RA_STR, 12, "FStep", str_setting[8], func_default },// Freq Step •\Ž¦

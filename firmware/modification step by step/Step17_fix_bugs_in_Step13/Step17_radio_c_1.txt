@@ -1,0 +1,2 @@
+  s = memorycopy( menu_freqstep.str+MENUITEM_NSTR*menu_freqstep.sel, str_setting[8], 4 ); // F.Step‚Ì•\¦’l‚ğ str_setting[8]‚Éİ’è
+  *s = 0;
