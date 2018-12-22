@@ -1,0 +1,13 @@
+static void set_txmeter_mode ( int rot );
+
+
+
+#define N_SETTINGS  (18)       // 設定項目数
+
+
+
+  { "18.TxM mode       ", set_txmeter_mode },    // Txメーターのモード選択
+
+
+
+  N_TXMMODE,

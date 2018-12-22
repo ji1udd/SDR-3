@@ -1,0 +1,7 @@
+  if ( tx && ((mod==3)||(mod==4))) {     // CW送信時はキャリア周波数に相当するbinの値
+    smax = signal[256] ;
+  } else {                               // CW送信時以外は復調範囲の最大値
+    for( int i=hi_from; i<hi_to; i++ ) {
+      s = signal[i];
+      if( s > smax ) smax = s;
+    }

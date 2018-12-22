@@ -1,0 +1,14 @@
+
+//--------------------------------------------------------------------
+// Tx-Meter Mode‘I‘ð
+//--------------------------------------------------------------------
+static void set_txmeter_mode ( int rot ) {
+  tx_meter_mode += rot;
+  if ( tx_meter_mode > 2) {
+    tx_meter_mode=2;
+  } else if ( tx_meter_mode <0 ) {
+    tx_meter_mode=0 ;
+  }
+  dec2str_s( tx_meter_mode, setting_buttons[N_TXMMODE%N_ITEMS].str+17, 1 );
+}
+

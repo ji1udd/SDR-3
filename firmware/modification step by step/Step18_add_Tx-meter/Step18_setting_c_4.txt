@@ -1,0 +1,1 @@
+      tx_meter_mode    = *adrs++;
