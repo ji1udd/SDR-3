@@ -286,7 +286,7 @@ void analog_s_meter_type1 ( int s, int s_meter_needle, int color ) {
   else if ( s > 100 )
     s = 100 ;
                              
-  s = s * 0.8158 + 236.4 ;           // -14dBu は 225、100dBuは 318に変換
+  s = (int)( s * 0.8158 + 236.9 ) ; // -14dBu は 225、100dBuは 318に変換
   x0 = s ;
   y0 = s_meter_type1_origin_y ;
   x1 = s ;
@@ -347,7 +347,7 @@ void analog_s_meter_type3 ( int s, int s_meter_needle, int color ) {
   else if ( s > 100 )
     s = 100 ;
 
-  s = s * 0.8158 + 236.4 ;          // -14dBu は 225、100dBuは 318に変換
+  s = (int)( s * 0.8158 + 236.9 ) ; // -14dBu は 225、100dBuは 318に変換
   y0 = s_meter_type3_origin_y + 6 ; //バーグラフの上辺
   y1 = s_meter_type3_origin_y + 11; //バーグラフの下辺
   if ( bar_old < 225 )  bar_old = 225 ;
