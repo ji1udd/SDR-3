@@ -1,0 +1,1 @@
+  stm32_gpio_mode( BAT_PORT, BAT_PIN, GPIO_MODE_ANALOG );                   // PA7, バッテリ電圧分圧入力用

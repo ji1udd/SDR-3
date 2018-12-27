@@ -1,0 +1,12 @@
+//--------------------------------------------------------------------
+// Battery Meter Mode‘I‘ð
+//--------------------------------------------------------------------
+static void set_battmeter_mode ( int rot ) {
+  batt_meter_mode += rot;
+  if ( batt_meter_mode > 2) {
+    batt_meter_mode=2;
+  } else if ( batt_meter_mode <0 ) {
+    batt_meter_mode=0 ;
+  }
+  dec2str_s( batt_meter_mode, setting_buttons[N_BATTMMODE%N_ITEMS].str+17, 1 );
+}

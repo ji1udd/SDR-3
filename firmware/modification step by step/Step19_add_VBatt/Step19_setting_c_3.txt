@@ -1,0 +1,1 @@
+    *pdata++ = batt_meter_mode ;

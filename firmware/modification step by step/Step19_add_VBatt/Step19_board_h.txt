@@ -1,0 +1,3 @@
+#define BAT_PORT              GPIOA     // PA7(ADC12_7) バッテリ電圧分圧入力用
+#define BAT_PIN               7
+#define BAT_ADCCH             7

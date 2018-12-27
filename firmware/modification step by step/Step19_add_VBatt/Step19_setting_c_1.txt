@@ -1,0 +1,10 @@
+static void set_battmeter_mode ( int rot );
+
+
+#define N_SETTINGS  (19)       // 設定項目数
+
+
+  { "19.BattM mode     ", set_battmeter_mode },  // Batteryメーターのモード選択
+
+
+  N_BATTMMODE,

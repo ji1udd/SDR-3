@@ -1,0 +1,46 @@
+#define BATT_FS      8745  // (mV) バッテリメーターフルスケール値(分圧抵抗で決まる) FS 8745mV=3.3V * (33k+20k) / 20k
+#define BATT_LOW     7000  // (mV) バッテリ電圧低下検出しきい値
+#define BATT_AVE_CNT   10  // n回のADC変換結果の平均値を求める
+#if BATT_FS > 9999 
+  #define INUM 2           // 整数部2桁
+#else
+  #define INUM 1           // 整数部1桁
+#endif
+
+int batt_meter_mode = 0 ;  // 0: RxLevel  1: VBatt(少数点2位まで)  2: RxLevelとVBatt(少数点1位まで)
+static int batt_cnt = 0 ;
+static int batt_sum = 0 ;
+static int vb       = 0 ;
+
+
+
+(略)
+
+
+
+
+  int x = (batt_meter_mode==2)? 224 : ( (batt_meter_mode==1)? ( (INUM==1)? 252: 246) : 242 );
+  int y = 38 ;
+  if ( batt_meter_mode!=1 ) {
+    lcd_draw_str( x,      y,   str,   8, C_RA_SIGNAL_STR, C_RA_BG );  // 数値を font8 で表示
+    lcd_draw_str( x+8*3,  y,   "dBu", 8,  C_RA_SIGNAL_STR, C_RA_BG ); // dBu を font8 で表示
+    x += 8*7 ;
+  }
+
+  // バッテリ電圧表示
+  if ( batt_meter_mode!=0 ) {                    // VBattを表示するモードなら
+    batt_sum += adc_read( SW_ADC, BAT_ADCCH );   // ADC(12bit)の値を積算
+    batt_cnt++ ;
+    if ( batt_cnt==BATT_AVE_CNT ) {              // 所定回数積算したなら
+      batt_cnt=0 ;
+      vb = batt_sum*BATT_FS/4095/BATT_AVE_CNT ;  // 平均値を求め、mV単位の整数値にしてvbを更新
+      batt_sum = 0 ;
+    }
+    char *strp = str;
+    strp = dec2str_u( vb/1000, strp, INUM );     // 整数部
+    strp = strcopy( ".", strp );
+    strp = dec2str_u1( vb%1000, strp, 3, '0' ) - ((batt_meter_mode==2)? 2 : 1) ; // 小数部(ゼロサプレスしない)
+    strp = strcopy( "V", strp );
+    *strp= 0;
+    lcd_draw_str( x, y, str, 8, ( vb < BATT_LOW )? C16_MAGENTA : C_RA_SIGNAL_STR, C_RA_BG );  // しきい値未満なら色を替えて表示
+  }

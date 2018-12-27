@@ -1,0 +1,1 @@
+extern int batt_meter_mode;
