@@ -149,8 +149,6 @@
 - Turbo HAMLOG や Ctestwin に SDR-3の周波数とモード(SSB,CW,AM) を取り込める。PCソフトウェアからSDR-3の制御は未対応。
 - HAMLOG対応のため UART1のボーレイトを 115200bps から 38400bps に変更(補足：SDR-3ファームウェアの書き込み時は従来通りボーレイトは自動設定される)
 - CI-VプロトコルにおけるSDR-3のアドレスは 0x10 (元々はIC-275用の割り当て)。SDR-3のアドレスは、rigctrl.c の #defineで変更可能。
-[_Turbo HAMLOG setting_](firmware/modification step by step/Step20_add_rigctrl/hamlog_setting.jpg)
-[_Ctestwin_setting_](firmware/modification step by step/Step20_add_rigctrl/ctestwin_setting.jpg)
 - Sメーターパネルタイプ3 のBoldモードにピークホールド機能を追加(ぎょふんさん作)
 - Sメーターパネルタイプ0 の受信レベル表示や電源電圧表示の文字のちらつき(Step19の制限事項)を改善
 - Step20フォルダ中にある rigctrl.c は radioフォルダに入れる。
