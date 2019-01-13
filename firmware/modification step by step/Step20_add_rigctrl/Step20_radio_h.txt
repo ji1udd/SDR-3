@@ -1,0 +1,8 @@
+#define BATT_FS           8745  // (mV) バッテリメーターフルスケール値(分圧抵抗で決まる) FS 8745mV=3.3V * (33k+20k) / 20k
+#define BATT_LOW          7000  // (mV) バッテリ電圧低下検出しきい値
+#define BATT_AVE_CNT        10  // n回のADC変換結果の平均値を求める
+#if BATT_FS > 9999 
+  #define INUM 2           // 整数部2桁
+#else
+  #define INUM 1           // 整数部1桁
+#endif

@@ -1,0 +1,1 @@
+    *pdata++ = civ_mode ;

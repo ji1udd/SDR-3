@@ -1,0 +1,8 @@
+if ( civ_mode == 0 ) {              // CI-Vƒ‚[ƒh‚Å‚È‚¢
+
+
+}
+
+
+
+  if( (dpoutput != 0)&&(civ_mode==0) ) uart1_putstr( str );

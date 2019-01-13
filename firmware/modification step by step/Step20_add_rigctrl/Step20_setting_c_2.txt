@@ -1,0 +1,8 @@
+//--------------------------------------------------------------------
+// CI-V Mode‘I‘ð
+//--------------------------------------------------------------------
+static void set_civ_mode ( int rot ) {
+  civ_mode += rot;
+  civ_mode &= 1;
+  strcopy( civ_mode?"ENB":"DIS", setting_buttons[N_CIVMODE%N_ITEMS].str+15);
+}

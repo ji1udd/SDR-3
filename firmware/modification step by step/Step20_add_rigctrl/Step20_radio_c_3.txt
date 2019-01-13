@@ -1,0 +1,11 @@
+  civ_send_freq();
+
+
+
+//  if ( diff != 0 ) {                             // s Ç∆ s_old Ç…ç∑Ç™Ç†ÇÈÇ»ÇÁçXêVÇ∑ÇÈ
+    disp_smeter( s ) ;
+//  }
+
+
+
+    lcd_draw_str( x+8*3,  y,   "dBu ", 8, C_RA_SIGNAL_STR, C_RA_BG ); // dBu Ç font8 Ç≈ï\é¶

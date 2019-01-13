@@ -143,6 +143,19 @@
 - 制限事項：メーターパネルタイプ0 を選択した場合、受信レベル表示や電源電圧表示がちらつく。
 - 注意: PA7には 3.3Vを超える電圧が掛からないようにすること。3.3Vを超える電圧が掛かるとSDR-3が壊れる可能性が極めて高い。フェイルセーフのためにツェナーDiでPA7をクランプするのも良い方法と思われる。
 
+### Step20:
+- SDR-3とPCソフトウェアとの連携機能を追加。CN3(UART1)端子とCI-Vプロトコルを使用。
+- settingメニューで CI-V機能の有効/無効を設定。有効にするとUART1はCV-I通信用となり、無効にすると従来通りデバッグ用シリアル通信(ターミナル接続)となる。
+- Turbo HAMLOG や Ctestwin に SDR-3の周波数とモード(SSB,CW,AM) を取り込める。PCソフトウェアからSDR-3の制御は未対応。
+- HAMLOG対応のため UART1のボーレイトを 115200bps から 38400bps に変更(補足：SDR-3ファームウェアの書き込み時は従来通りボーレイトは自動設定される)
+- CI-VプロトコルにおけるSDR-3のアドレスは 0x10 (元々はIC-275用の割り当て)。SDR-3のアドレスは、rigctrl.c の #defineで変更可能。
+[_Turbo HAMLOG 設定例_] (firmware/modification step by step/Step20_add_rigctrl/hamlog_setting.jpg)
+[_Ctestwin設定例_] (firmware/modification step by step/Step20_add_rigctrl/ctestwin_setting.jpg)
+- Sメーターパネルタイプ3 のBoldモードにピークホールド機能を追加(ぎょふんさん作)
+- Sメーターパネルタイプ0 の受信レベル表示や電源電圧表示の文字のちらつき(Step19の制限事項)を改善
+- Step20フォルダ中にある rigctrl.c は radioフォルダに入れる。
+- Step20フォルダ中にある meter.c を使う ( meter.c を差し替える必要あり。内容更新あり) 
+
 
 ## その他
 ### Appendix1:

@@ -1,0 +1,1 @@
+  USART1->BRR = (SYSTEMCORECLOCK/2/16 / 38400)<<4; // 38.4kbps

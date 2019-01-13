@@ -1,0 +1,10 @@
+static void set_civ_mode ( int rot );
+
+
+#define N_SETTINGS  (20)       // İ’è€–Ú”
+
+
+  { "20.CI-V mode      ", set_civ_mode },  // CI-Vƒ‚[ƒh‘I‘ğ
+
+
+  N_CIVMODE,
