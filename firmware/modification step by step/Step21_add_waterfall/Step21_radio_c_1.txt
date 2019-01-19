@@ -1,0 +1,35 @@
+//--------------------------------------------------------------------
+// Waterfall のオフセットレベル設定
+//--------------------------------------------------------------------
+static void set_wf_offset_level( int rot ) {
+  char str[20];
+  char *s = str;
+
+  wf_offset_level += rot;
+  if (wf_offset_level < -20) { // 上下限リミット処理
+    wf_offset_level = -20;
+  } else if ( wf_offset_level > 100 ) {
+    wf_offset_level = 100;
+  }
+  s = strcopy( "WF OFS:", s );
+  dec2str_s( wf_offset_level, s , 3 );
+  gui_popup_show_time( str, MAX(popuptime_default,GUI_POPUP_SHORTTIME) );
+}
+
+//--------------------------------------------------------------------
+// Waterfall の色ステップ設定
+//--------------------------------------------------------------------
+static void set_wf_color_step( int rot ) {
+  char str[20];
+  char *s = str;
+
+  wf_color_step += rot;
+  if (wf_color_step < 1) { // 上下限リミット処理
+    wf_color_step = 1;
+  } else if ( wf_color_step > 5 ) {
+    wf_color_step = 5;
+  }
+  s = strcopy( "WF Step:", s );
+  dec2str_s( wf_color_step, s , 1 );
+  gui_popup_show_time( str, MAX(popuptime_default,GUI_POPUP_SHORTTIME) );
+}

@@ -1,0 +1,17 @@
+          switch( main_re_mode ) {
+            case 0:
+              s = strcopy( "Freq.", s );
+              if( popuptime_default ) gui_popup_show( str ); // 0 ‚Ì‚Æ‚«‚Í•\Ž¦‚µ‚È‚¢
+              break;
+            case 1:
+              s = strcopy( "F.Step", s );
+              gui_popup_show_time( str, MAX(popuptime_default,GUI_POPUP_TIME) );
+              break;
+            case 2:
+              s = strcopy( "WF OFS", s );
+              gui_popup_show_time( str, MAX(popuptime_default,GUI_POPUP_TIME) );
+              break;
+            case 3:
+              s = strcopy( "WF Step", s );
+              gui_popup_show_time( str, MAX(popuptime_default,GUI_POPUP_TIME) );
+              break;

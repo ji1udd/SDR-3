@@ -1,0 +1,11 @@
+static void set_wf_mode ( int rot );
+
+
+#define N_SETTINGS  (21)       // İ’è€–Ú”
+
+
+  { "21.Waterfall      ", set_wf_mode },  // Waterfall•\¦‚ÌON/OFF‘I‘ğ
+
+
+  N_WFMODE,
+

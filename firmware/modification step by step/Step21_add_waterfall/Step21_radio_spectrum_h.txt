@@ -1,0 +1,13 @@
+//#define SP_H                  (84)  // (120)
+//#define SP_YDIVN              (7)   // (10)                // N division
+
+
+
+#define WF_X                  (SP_X)              // waterfall 表示位置X  26
+#define WF_Y           204 // (SP_Y+SP_H+1+6+8)   // waterfall 表示位置Y 204
+#define WF_W                  (SP_W -1)           // waterfall 表示幅    279
+#define WF_H            35 // (119 - SP_H)        // waterfall 表示高     35
+
+
+
+void lcd_draw_waterfall( int x, int y, int w, int h, unsigned char *buf, int bufoffset, int leveloffset, int step );

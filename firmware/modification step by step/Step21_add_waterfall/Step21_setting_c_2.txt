@@ -1,0 +1,8 @@
+//--------------------------------------------------------------------
+// Waterfall•\Ž¦‚ÌON/OFF‘I‘ð
+//--------------------------------------------------------------------
+static void set_wf_mode ( int rot ) {
+  wf_mode += rot;
+  wf_mode &= 1;
+  strcopy( wf_mode?"ENB":"DIS", setting_buttons[N_WFMODE%N_ITEMS].str+15);
+}

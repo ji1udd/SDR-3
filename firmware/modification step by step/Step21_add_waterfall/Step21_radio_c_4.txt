@@ -1,0 +1,6 @@
+              case 2:
+                set_wf_offset_level( rot ); // Waterfall offset level
+                break;
+              case 3:
+                set_wf_color_step( rot );   // Waterfall color step
+                break;

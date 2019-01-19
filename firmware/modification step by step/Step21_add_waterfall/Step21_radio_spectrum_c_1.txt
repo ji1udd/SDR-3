@@ -1,0 +1,5 @@
+static void disp_frame( int SP_H, int SP_YDIVN );
+
+
+//static char str_splevel[SP_YDIVN+1][4]; // 信号レベル軸
+static char str_splevel[11][4]; // 信号レベル軸  SP_YDIVN = 10 (Max)

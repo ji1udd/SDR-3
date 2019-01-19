@@ -1,0 +1,11 @@
+  wf_ptr = wf_buf + (WF_W * wf_count ) ; // 今回のWFバッファポインタをセット
+
+
+
+    *wf_ptr++ = sig ; // waterfall用バッファに書き込む
+
+
+
+  if ( wf_mode ) lcd_draw_waterfall( WF_X+1, WF_Y, WF_W, WF_H, wf_buf, wf_count, wf_offset_level, wf_color_step );
+  wf_count-- ;
+  if ( wf_count < 0 ) wf_count = WF_H -1 ; 

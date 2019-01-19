@@ -1,0 +1,40 @@
+int wf_mode = 0 ;
+static void disp_frame( int SP_H, int SP_YDIVN ) {
+
+
+
+    if ( wf_mode ) {
+      lcd_draw_vline( WF_X,        WF_Y, WF_Y+WF_H-1, C_SP_FRAME ); // waterflame枠
+      lcd_draw_vline( WF_X+WF_W+1, WF_Y, WF_Y+WF_H-1, C_SP_FRAME );
+      lcd_draw_hline( WF_X, WF_X+WF_W+1, WF_Y+WF_H,   C_SP_FRAME );
+    }
+
+
+
+
+int wf_offset_level = 0 ;
+int wf_color_step = 1 ;
+static unsigned char wf_buf[WF_W * WF_H] ;  // WFバッファメモリ
+static int wf_count = WF_H -1 ;
+static int SP_H ;
+static int SP_YDIVN ;
+
+
+
+
+  unsigned char *wf_ptr ;             // WFバッファメモリへのライトポインタ
+
+  if( sp_init ) {
+    if ( wf_mode ) {
+      SP_H = 84 ;
+      SP_YDIVN = 7 ;
+    } else {
+      SP_H = 120 ;
+      SP_YDIVN = 10 ;
+    }
+
+
+
+
+    disp_frame( SP_H, SP_YDIVN );             // スペクトラムアナライザフレーム表示
+

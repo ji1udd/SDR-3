@@ -1,0 +1,2 @@
+extern int wf_offset_level ;
+extern int wf_color_step ;

@@ -1,0 +1,1 @@
+    *pdata++ = wf_mode ;

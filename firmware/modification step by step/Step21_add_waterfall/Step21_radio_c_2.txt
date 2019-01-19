@@ -1,0 +1,9 @@
+  *pmem8++ = wf_color_step;
+  int8* pmems8=(int8*)pmem8;
+  *pmems8++ = wf_offset_level;
+
+
+
+  wf_color_step     = *pmem8++;
+  int8* pmems8=(int8*)pmem8;
+  wf_offset_level   = *pmems8++;
