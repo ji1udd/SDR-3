@@ -1,0 +1,10 @@
+    radio_buttons[N_BUTTON_TRX].status = 7;       // TX 使用中＆表示
+    radio_buttons[N_BUTTON_SQLVL].status &= 0xFE; // SQL Level 不使用
+    radio_buttons[N_BUTTON_SQBSY].status &= 0xFE; // SQL Busy  不使用
+
+
+
+    radio_buttons[N_BUTTON_TRX].status = 0;       // TX 不使用
+    radio_buttons[N_BUTTON_SQLVL].status |= 0x01; // SQL Level 使用中
+    radio_buttons[N_BUTTON_SQBSY].status |= 0x01; // SQL Busy  使用中
+    sql_update = 1;

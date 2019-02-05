@@ -1,0 +1,1 @@
+static int sql_level  = -14;        // スケルチ閾値 初期値 -14 は OFF

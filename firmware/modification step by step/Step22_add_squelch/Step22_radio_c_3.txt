@@ -1,0 +1,22 @@
+  //--------------------------------------------------------------------
+  // SQL 機能
+  //--------------------------------------------------------------------
+  if ( s >= sql_level ) {
+    sql_timer  = 0 ;
+    if ((sql_mute==1)||sql_update) {      // 信号が閾値を上回ったか、閾値変更/GUI更新時
+      sql_mute = 0 ;
+      strcopy( "Busy  ", str_sql_busy );
+      gui_update_button( N_BUTTON_SQBSY );
+      LED3_ON();
+      TLV320AIC3204_VOLUME( audiovolume );
+    }
+  } else if ( ((sql_mute==0) && (sql_timer==SQL_OFF_CNT))||sql_update ) { // 信号が閾値未満で規定時間経過か、閾値変更/GUI更新時
+    sql_mute = 1;
+    strcopy( "SQL   ", str_sql_busy );
+    gui_update_button( N_BUTTON_SQBSY );
+    LED3_OFF();
+    TLV320AIC3204_VOLUME( 0 );
+  } else if ( sql_mute==0 ) {
+    sql_timer++ ;
+  }
+  sql_update = 0 ;

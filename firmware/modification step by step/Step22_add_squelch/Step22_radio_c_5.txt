@@ -1,0 +1,3 @@
+//          gui_update_button( N_BUTTON_TRX );
+            gui_update_button( N_BUTTON_SQLVL );
+            gui_update_button( N_BUTTON_SQBSY );

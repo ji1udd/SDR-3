@@ -1,0 +1,4 @@
+#define SQL_OFF_CNT    20   // 50ms * N
+static int sql_update = 1 ;
+static int sql_mute   = 0 ;
+static int sql_timer  = 0 ;

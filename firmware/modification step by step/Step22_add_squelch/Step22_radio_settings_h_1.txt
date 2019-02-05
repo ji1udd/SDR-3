@@ -1,0 +1,22 @@
+static char str_sql_level[8];
+static char str_sql_busy[8];
+
+
+
+
+  { 0,  0, 71, 48, 24, 0, C_RA_TX_BG, C_RA_TX_STR, 24, "", "TX", func_default },// 送信
+
+
+  { 1,  0, 82, 48,  13, 0, C_RA_BG, C_RA_SIGNAL_STR, 8, "", str_sql_level, func_default },// SQL Level 表示
+  { 1,  0, 70, 48,  12, 0, C_RA_BG, C_RA_SIGNAL_STR, 8, "", str_sql_busy, func_default },// SQL Busy 表示
+
+
+
+
+#define N_BUTTON_SQLVL    (16)       // SQL Levelボタン（受信時）
+#define N_BUTTON_SQBSY    (17)       // SQL Busy ボタン（受信時）
+
+
+
+
+#define SUB_RE_MAX        (4)           // サブロータリーエンコーダーの動作モード数

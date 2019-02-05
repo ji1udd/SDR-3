@@ -1,0 +1,28 @@
+//---------------------------------------------------------------------
+// スケルチ(SQL) の閾値設定
+//---------------------------------------------------------------------
+static void set_sql_level( int rot ) {
+  char str[20];
+  char *s = str;
+
+  sql_level += rot;
+  if (sql_level < -14) { // 上下限リミット処理
+    sql_level = -14;
+  } else if ( sql_level > 99 ) {
+    sql_level = 99;
+  }
+  s = strcopy( "SQL Lev:", s );
+  if(sql_level == -14){
+    strcopy( "off", s );
+    radio_buttons[N_BUTTON_SQLVL].status &= 0xFD ; // SQL Level 非表示
+    radio_buttons[N_BUTTON_SQBSY].status &= 0xFD ; // SQL Busy  非表示
+  } else {
+    dec2str_s( sql_level , s , 3 );
+    radio_buttons[N_BUTTON_SQLVL].status |= 0x02 ; // SQL Level 表示
+    radio_buttons[N_BUTTON_SQBSY].status |= 0x02 ; // SQL Busy  表示
+    sql_update = 1;
+    s = dec2str_s ( sql_level, str_sql_level, 3 ); // SQL Levelを str_sql_levelに設定
+    strcopy( "dBu", s );
+  }
+  gui_popup_show_time( str, MAX(popuptime_default,GUI_POPUP_SHORTTIME) );
+}

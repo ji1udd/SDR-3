@@ -1,0 +1,8 @@
+          }else{        // ボリューム / BW / Notch / SQL
+
+
+
+
+              case 3: // SQL lev
+                set_sql_level( rot ); // スケルチの閾値を変更
+                break;
