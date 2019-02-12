@@ -1,0 +1,7 @@
+// Waterfall •\Ž¦
+static int wf_count_disp ;
+void waterfall_disp( void ) {
+  if ( wf_mode ) {
+    lcd_draw_waterfall( WF_X+1, WF_Y, WF_W, WF_H, wf_buf, wf_count_disp, wf_offset_level, wf_color_step );
+  }
+}

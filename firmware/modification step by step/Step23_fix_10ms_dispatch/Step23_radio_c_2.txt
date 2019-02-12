@@ -1,0 +1,20 @@
+    }else if( time == 2 ) {     // disp AUDIO Spectrum & capture FIRPOLY
+
+
+          signal_disp = 1 ;     // Signal表示要求する
+
+
+
+
+
+    } else if( time == 3 ) {
+      if( signal_disp ) {       // Signal表示要求ありなら表示する(含むSQL処理)
+        disp_signal_level() ;
+        signal_disp = 0 ;       // 表示要求をクリア
+      }
+
+    } else if( time == 4 ) {
+      if( wf_disp ) {           // Waterfall表示要求ありなら表示する
+        waterfall_disp() ;
+        wf_disp = 0 ;           // 表示要求をクリア
+      }

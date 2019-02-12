@@ -1,0 +1,2 @@
+static int signal_disp = 0 ;
+int wf_disp = 0 ;

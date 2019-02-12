@@ -1,0 +1,4 @@
+  if ( wf_mode ) { 
+    wf_disp = 1 ;              // Waterfall表示要求
+    wf_count_disp = wf_count ; // 表示用バッファ位置を設定
+  }
