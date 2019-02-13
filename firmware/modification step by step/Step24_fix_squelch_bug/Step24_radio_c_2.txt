@@ -1,0 +1,12 @@
+      sql_mute_off() ;
+
+
+    sql_mute_on() ;
+
+
+
+  // SQL or Busy表示
+  if ( (gui_popup_timer()==0) && sql_status_disp ) {  // ポップアップ表示中でない時に表示要求があれば表示
+    disp_sql_status();                                // ポップアップ表示中はスケルチステータス表示は保留
+    sql_status_disp = 0 ;
+  }

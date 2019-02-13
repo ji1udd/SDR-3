@@ -1,0 +1,33 @@
+//--------------------------------------------------------------------
+//  スケルチステータス表示
+//--------------------------------------------------------------------
+static void disp_sql_status( void ) {
+  if (sql_mute) {                        // sql_muteに従って "SQL"または"Busy"を表示
+    strcopy( "SQL   ", str_sql_busy );
+    gui_update_button( N_BUTTON_SQBSY );
+  } else {
+    strcopy( "Busy  ", str_sql_busy );
+    gui_update_button( N_BUTTON_SQBSY );
+  }
+}
+
+
+//--------------------------------------------------------------------
+//  スケルチミュート制御
+//--------------------------------------------------------------------
+static int sql_status_disp = 0 ;
+
+static void sql_mute_off( void ) {
+  sql_mute = 0 ;
+  sql_timer = 0 ;
+  sql_status_disp = 1 ;
+  LED3_ON();
+  TLV320AIC3204_VOLUME( audiovolume );
+}
+
+static void sql_mute_on( void ) {
+  sql_mute = 1;
+  sql_status_disp = 1 ;
+  LED3_OFF();
+  TLV320AIC3204_VOLUME( 0 );
+}
