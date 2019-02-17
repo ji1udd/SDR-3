@@ -1,0 +1,11 @@
+  const int n=64;  // 64Word/ch
+
+
+    ch_memory_buf[ch_memory_num*64]=0xFFFFFFFF; // Á‹Ž  64Word/ch
+
+
+
+
+    for( i=25; i>0; i-- ) {  // ŽŸ‚Ì ch ƒƒ‚ƒŠ[‚ª‘¶Ý‚·‚é‚Æ‚±‚ë‚ð’T‚· 25ch
+      if( ch_memory_num > 24 ) ch_memory_num = 0; // 25ch
+

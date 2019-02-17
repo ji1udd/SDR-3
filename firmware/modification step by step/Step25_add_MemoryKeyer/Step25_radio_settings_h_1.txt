@@ -1,0 +1,19 @@
+static char str_edit_msg[30];
+
+
+
+  { 0,  0, 48, 320, 15, 0x20, C16_MAGENTA_13, C_RA_STR, 12, "", str_edit_msg, func_default },// Keyer Message editor表示
+
+
+
+#define N_BUTTON_DENOISE  (6)       // DENOISE ボタン (設定6)
+#define N_BUTTON_STEREO   (7)       // STEREO ボタン (設定7)
+
+
+#define N_BUTTON_FSTEP    (15)       // F.Step ボタン
+
+
+#define N_BUTTON_MEDIT    (18)       // Keyer Message editor表示 (Edit時)
+
+
+

@@ -1,0 +1,30 @@
+        case SW_FFT0:                    // SW5
+          if ( chk_cw_mode() ) {
+            m_num = 0 ;
+            m_enter_edit_mode( m_num ) ; // CWメッセージ 0 をエディット
+          }
+          break ;
+        case SW_FFT1:                    // SW6
+          if ( chk_cw_mode() ) {
+            m_num = 1 ;
+            m_enter_edit_mode( m_num ) ; // CWメッセージ 1 をエディット
+          }
+          break ;
+        case SW_FFT2:                    // SW7
+          if ( chk_cw_mode() ) {
+            m_num = 2 ;
+            m_enter_edit_mode( m_num ) ; // CWメッセージ 2 をエディット
+          }
+          break ;
+        case SW8:                        // SW8
+          if ( chk_cw_mode() ) {
+            m_num = 3 ;
+            m_enter_edit_mode( m_num ) ; // CWメッセージ 3 をエディット
+          }
+          break ;
+
+
+
+
+              menu_num_show( "Memory", &ch_memory_num, 0, 24, ret_from_menu_num ); // 25ch
+

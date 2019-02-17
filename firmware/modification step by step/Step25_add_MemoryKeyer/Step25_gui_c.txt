@@ -1,0 +1,20 @@
+//       if( corner == 0 ) lcd_draw_rectfill( x, y, w, h, color2 );
+//       else         lcd_draw_rectfill_cut0( x, y, w, h, color2, corner );
+         lcd_draw_rectfill( x, y, w, h, color2 );
+
+
+
+      if ( ( style & 0xe0 ) == 0x20 ) {
+          y = y + ( h - button->size )/2;       // ç∂ëµÇ¶ÅïècíÜâõëµÇ¶
+          int cursor = x + ( ( style & 0x1F ) * button->size ) ;
+          lcd_draw_str( x, y-1, button->str, button->size, color1, color2 ); // Yà íuÇí≤êÆ(-1)
+          y = y + h -1 ;
+          lcd_draw_hline( x, cursor-1, y, color2 );
+          lcd_draw_hline( cursor, cursor+11, y, color1 );
+          lcd_draw_hline( cursor+12, x+w ,y, color2 );
+      } else {
+
+
+
+      }
+

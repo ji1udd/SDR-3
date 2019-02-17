@@ -1,0 +1,1 @@
+void memory_keyer_start( char *msg_ptr ) ;

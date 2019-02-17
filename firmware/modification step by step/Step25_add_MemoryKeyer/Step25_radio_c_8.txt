@@ -1,0 +1,23 @@
+        case RE1:
+          if ( m_msg_edit_mode ) {      // エディットモードなら
+            m_sel_char( rot ) ;         // 文字選択
+          }
+                                        // 周波数 or 周波数ステップ
+          else if( memory_mode==0) {    // 通常モード（周波数入力モード）
+
+
+
+
+
+            for( i=25; i>0; i-- ) {    // 局メモリーが存在するところを探す 25ch
+              if( ch_memory_num < 0  ) ch_memory_num = 24;  // 25ch
+              if( ch_memory_num > 24 ) ch_memory_num = 0;   // 25ch
+
+
+
+
+          if ( m_msg_edit_mode ) {     // エディットモードなら
+            m_move_column( rot ) ;     // エディット位置を移動
+          }
+          else if( tx ) {    // MIC GAIN
+

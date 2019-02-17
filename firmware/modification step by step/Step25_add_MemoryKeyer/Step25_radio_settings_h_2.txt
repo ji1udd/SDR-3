@@ -1,0 +1,1 @@
+static uint32 ch_memory_buf[25*64]; // 局メモリーバッファー　25局分

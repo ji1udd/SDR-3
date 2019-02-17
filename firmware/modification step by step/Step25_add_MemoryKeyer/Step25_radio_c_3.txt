@@ -1,0 +1,19 @@
+  const int n=64;  // 64Word/ch
+  for( int i=0; i<25*n; i++ ) {  // 25ch
+
+
+      if( ch < 25 ){  // 25ch
+
+
+
+
+  const int n=64;  // 64Word/ch
+
+
+
+  const int n=64;  // 64Word/ch
+
+
+
+  for( int ch=0; ch<25; ch++ ) {  // 25ch
+

@@ -1,0 +1,50 @@
+          if ( m_msg_edit_mode ) {                   // エディットモードなら
+            m_exit_edit_mode() ;                     // エディットモードから抜ける
+            break ;
+          } else if ( chk_cw_mode() ) {              // CWモードなら
+            memory_keyer_start( keyer_message[3] ) ; // メッセージ3を送信
+            break ;
+          }
+
+
+
+
+          if ( m_msg_edit_mode ) {                   // エディットモードなら
+            m_exit_edit_mode() ;                     // エディットモードから抜ける
+            break ;
+          } else if ( chk_cw_mode() ) {              // CWモードなら
+            memory_keyer_start( keyer_message[0] ) ; // メッセージ0を送信
+            break ;
+          }
+
+
+
+
+          if ( m_msg_edit_mode ) {                   // エディットモードなら
+            m_exit_edit_mode() ;                     // エディットモードから抜ける
+            break ;
+          } else if ( chk_cw_mode() ) {              // CWモードなら
+            memory_keyer_start( keyer_message[1] ) ; // メッセージ1を送信
+            break ;
+          }
+          probe_cur++;
+          limit( &probe_cur, 1, probe_n-1 );
+          signal=0;           // 切り替えた瞬間のスペクトラム表示させない
+          fftbufidx=0;
+          spectrum_set_ref( 100 ); // ref=100dB
+          spectrum_set_span( probe_tbl[probe_cur].fs ); // 0:48kHz  1:12kHz  2:6kHz
+          spectrum_set_highlight( 100, -100 ); // ハイライト表示しない
+          debug_message_init();
+          break;
+
+
+
+
+          if ( m_msg_edit_mode ) {                   // エディットモードなら
+            m_exit_edit_mode() ;                     // エディットモードから抜ける
+            break ;
+          } else if ( chk_cw_mode() ) {              // CWモードなら
+            memory_keyer_start( keyer_message[2] ) ; // メッセージ2を送信
+            break ;
+          }
+          probe_cur--;
