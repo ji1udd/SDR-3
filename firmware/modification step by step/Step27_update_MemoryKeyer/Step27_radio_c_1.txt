@@ -1,0 +1,27 @@
+//────────────────────────────────────
+//  ch メモリーバッファから読み出してメモリーキーヤーのメッセージのみ設定
+//────────────────────────────────────
+static int ch_memory_buf_read_only_msg( int ch ) {
+  uint32* pmem32=&ch_memory_buf[ch*64];  // 64Word/ch
+  if( *pmem32++ != (uint32)(FLASH_VALID + ch) ) return 0; // データエラー
+  pmem32++;  // freq              = *pmem32++;
+  pmem32++;  // notch_freq        = *pmem32++;
+  
+  uint8* pmem8=(uint8*)pmem32; // 以降は8ビットデータ
+  pmem8++;   // menu_freqstep.sel = *pmem8++;
+  pmem8++;   // band              = *pmem8++;
+  pmem8++;   // micgain           = *pmem8++;
+  pmem8++;   // speana_span       = *pmem8++;
+  for( int i= 0; i<N_MENU; i++ ) {
+    pmem8++; // menus[ i ].sel    = *pmem8++;
+  }
+  pmem8++;   // wf_color_step     = *pmem8++;
+  int8* pmems8=(int8*)pmem8;
+  pmems8++;  // wf_offset_level   = *pmems8++;
+  for( int i= 0; i<48; i++ ) keyer_message[0][i] = *pmems8++;
+  for( int i= 0; i<48; i++ ) keyer_message[1][i] = *pmems8++;
+  for( int i= 0; i<48; i++ ) keyer_message[2][i] = *pmems8++;
+  for( int i= 0; i<48; i++ ) keyer_message[3][i] = *pmems8++;
+//setting_all();
+  return 1;
+}

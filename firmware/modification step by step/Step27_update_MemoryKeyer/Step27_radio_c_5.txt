@@ -1,0 +1,28 @@
+  int i;
+
+
+
+
+          if ( m_msg_edit_mode ) {
+            if ( memory_mode==0 ) {     // エディットモード ＆ ch メモリ読み出しモードでない場合
+              m_sel_char( rot ) ;       // 文字選択
+            } else {                    // エディットモード ＆ ch メモリ読み出しモードの場合
+              ch_memory_num += rot;
+              for( i=25; i>0; i-- ) {   // 局メモリーが存在するところを探す 25ch
+                if( ch_memory_num < 0  ) ch_memory_num = 24;  // 25ch
+                if( ch_memory_num > 24 ) ch_memory_num = 0;   // 25ch
+                if( ch_memory_buf_read_only_msg(ch_memory_num) ) break; // キーヤーメッセージのみ読み出して設定
+                if( rot > 0 ) ch_memory_num++;
+                if( rot < 0 ) ch_memory_num--;
+              }
+              if( i==0 ) return;        // 見つからなかった
+              dec2str_s( ch_memory_num, str_memory, 2 );  // ch を文字列にする
+              gui_update_button( N_BUTTON_MEMORY ); // MEMORY ボタン表示更新
+              m_edit_msg_disp();                    // Keyer Message editor表示更新
+            }
+            break;
+
+
+
+
+//          int i;

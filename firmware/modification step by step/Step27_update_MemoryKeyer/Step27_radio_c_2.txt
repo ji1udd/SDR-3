@@ -1,0 +1,13 @@
+          if ( (memory_mode==0) && chk_cw_mode() ) {
+
+
+
+          if ( (memory_mode==0) && chk_cw_mode() ) {
+
+
+
+          if ( (memory_mode==0) && chk_cw_mode() ) {
+
+
+
+          if ( (memory_mode==0) && chk_cw_mode() ) {

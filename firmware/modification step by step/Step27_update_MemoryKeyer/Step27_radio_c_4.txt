@@ -1,0 +1,44 @@
+          if ( chk_cw_mode() ) {                         // CWモード時
+            if ( (memory_mode==0) && m_msg_edit_mode ) { // メモリー読み出しモードでないエディットモードなら
+              m_exit_edit_mode() ;                       // エディットモードから抜ける
+              break ;
+            } else {                                     // そうでなければ
+              memory_keyer_start( keyer_message[3] ) ;   // メッセージ3を送信
+              break ;
+            }
+
+
+
+
+          if ( chk_cw_mode() ) {                         // CWモード時
+            if ( (memory_mode==0) && m_msg_edit_mode ) { // メモリー読み出しモードでないエディットモードなら
+              m_exit_edit_mode() ;                       // エディットモードから抜ける
+              break ;
+            } else {                                     // そうでなければ
+              memory_keyer_start( keyer_message[0] ) ;   // メッセージ0を送信
+              break ;
+            }
+
+
+
+
+          if ( chk_cw_mode() ) {                         // CWモード時
+            if ( (memory_mode==0) && m_msg_edit_mode ) { // メモリー読み出しモードでないエディットモードなら
+              m_exit_edit_mode() ;                       // エディットモードから抜ける
+              break ;
+            } else {                                     // そうでなければ
+              memory_keyer_start( keyer_message[1] ) ;   // メッセージ1を送信
+              break ;
+            }
+
+
+
+
+          if ( chk_cw_mode() ) {                         // CWモード時
+            if ( (memory_mode==0) && m_msg_edit_mode ) { // メモリー読み出しモードでないエディットモードなら
+              m_exit_edit_mode() ;                       // エディットモードから抜ける
+              break ;
+            } else {                                     // そうでなければ
+              memory_keyer_start( keyer_message[2] ) ;   // メッセージ2を送信
+              break ;
+            }

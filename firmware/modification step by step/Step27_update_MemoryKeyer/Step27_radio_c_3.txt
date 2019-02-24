@@ -1,0 +1,5 @@
+              if ( m_msg_edit_mode ) {                                   // メッセージエディットモードの場合は
+                if( ch_memory_buf_read_only_msg(ch_memory_num) ) break ; // キーヤーメッセージのみ読み出して設定
+              } else  {                                                  // メッセージエディットモードでない場合は
+                if( ch_memory_buf_read(ch_memory_num) ) break;           // chメモリーの全項目を読み出して設定
+              }
