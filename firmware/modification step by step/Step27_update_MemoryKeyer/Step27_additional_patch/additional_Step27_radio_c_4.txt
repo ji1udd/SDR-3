@@ -1,0 +1,4 @@
+            if ( m_msg_edit_mode ) {                     // エディットモード(＆メモリー読み出しモード) なら
+              memory_mode=0;                             //
+              button_settingstr() ;
+              m_exit_edit_mode() ;                       // 通常モードに移行

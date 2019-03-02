@@ -1,0 +1,2 @@
+void memory_keyer_stop( void ) ;
+int  memory_keyer_status( void ) ;

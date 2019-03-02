@@ -1,0 +1,26 @@
+          if ( memory_keyer_status() ){    // メッセージ送信中なら
+            memory_keyer_stop() ;          // メッセージ送信を中止
+          } else if ( m_msg_edit_mode ) {  // エディットモード(＆メモリー読み出しモード) なら
+            memory_mode=0;                 // エディットモードを終了
+            button_settingstr() ;
+            m_exit_edit_mode() ;
+          } else {
+            menu_gui( -1 );         // 前に選択したメニュー項目から始める
+          }
+
+
+          if ( memory_keyer_status() ){    // メッセージ送信中なら
+            memory_keyer_stop() ;          // メッセージ送信を中止
+            break;
+          } else if( memory_mode ) {
+
+
+
+
+         if ( !memory_keyer_status() ) { // メッセージ送信中は操作不可
+
+
+
+         }
+
+

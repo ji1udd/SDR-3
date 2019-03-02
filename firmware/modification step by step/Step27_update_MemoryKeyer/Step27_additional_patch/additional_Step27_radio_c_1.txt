@@ -1,0 +1,1 @@
+  memory_keyer_stop() ;   // メッセージ送信を中止
