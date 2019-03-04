@@ -1,0 +1,8 @@
+          if( (ptt_toggle==0) && !chk_cw_mode() ){    // momentary
+
+
+
+
+
+
+          if( (ptt_toggle==0) && !chk_cw_mode() ){    // momentary
