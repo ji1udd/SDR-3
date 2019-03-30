@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name SDR-3)(type Legacy)(uri D:/KiCad/SDR-3/PanelSW/SDR-3.lib)(options "")(descr ""))
+)

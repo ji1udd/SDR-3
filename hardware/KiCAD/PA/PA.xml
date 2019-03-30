@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>D:\KiCad\SDR-3\PD85004_PP_PA_KiCad_v1.2\PD85004_PP_PA.sch</source>
+    <date>2019/01/28 6:00:42</date>
+    <tool>Eeschema (5.0.0)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>RFM04U6P Amplifier</title>
+        <company>JI1UDD</company>
+        <rev>1.0</rev>
+        <date>2019-01-26</date>
+        <source>PD85004_PP_PA.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>100n</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53E730A8</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>100n</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53E730BC</tstamp>
+    </comp>
+    <comp ref="C10">
+      <value>100n</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53E732C7</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>RFM04U6P</value>
+      <footprint>SDR-3:SOT89-3_Housing_RevA_02Sep2012</footprint>
+      <libsource lib="SDR-3" part="MOSFET_N" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53E73584</tstamp>
+    </comp>
+    <comp ref="Q2">
+      <value>RFM04U6P</value>
+      <footprint>SDR-3:SOT89-3_Housing_RevA_02Sep2012</footprint>
+      <libsource lib="SDR-3" part="MOSFET_N" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53E735A7</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>DNI</value>
+      <footprint>SDR-3:SM0805</footprint>
+      <libsource lib="SDR-3" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53E790EF</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>DNI</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53E79117</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>DNI</value>
+      <footprint>SDR-3:SM0805</footprint>
+      <libsource lib="SDR-3" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53E7921F</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>DNI</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53E79225</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>2700</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53ECB73D</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>4.7</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53ECB7A1</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>1500</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53ECB7E8</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>470</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53ECB8F7</tstamp>
+    </comp>
+    <comp ref="RV1">
+      <value>1000</value>
+      <footprint>SDR-3:TS4YJ</footprint>
+      <libsource lib="SDR-3" part="POT" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53ECBBAF</tstamp>
+    </comp>
+    <comp ref="RV2">
+      <value>1000</value>
+      <footprint>SDR-3:TS4YJ</footprint>
+      <libsource lib="SDR-3" part="POT" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53ECBCE9</tstamp>
+    </comp>
+    <comp ref="C15">
+      <value>100n</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53ED0AD7</tstamp>
+    </comp>
+    <comp ref="C13">
+      <value>100n</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53ED0BB0</tstamp>
+    </comp>
+    <comp ref="C12">
+      <value>100n</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53ED0E77</tstamp>
+    </comp>
+    <comp ref="C14">
+      <value>100n</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53ED0E7D</tstamp>
+    </comp>
+    <comp ref="C11">
+      <value>100n</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53ED0E83</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>1u</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53ED1206</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>1u</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53ED1211</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>1u</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53ED1217</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>1u</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53ED121D</tstamp>
+    </comp>
+    <comp ref="C9">
+      <value>47u</value>
+      <footprint>SDR-3:SM0805</footprint>
+      <libsource lib="SDR-3" part="CP1" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53ED2201</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>100</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53EF1487</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>100</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53EF1492</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>Conn_01x02</value>
+      <footprint>SDR-3:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C4C3B2B</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>Conn_01x02</value>
+      <footprint>SDR-3:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C4C3FCA</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>TA76431F</value>
+      <footprint>SDR-3:SOT89-3_Housing_RevA_02Sep2012</footprint>
+      <libsource lib="SDR-3" part="TA76431F" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>53ECB721</tstamp>
+    </comp>
+    <comp ref="C16">
+      <value>1u</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C51443F</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>Conn_01x02</value>
+      <footprint>SDR-3:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C526D08</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>4.7</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C56CE4F</tstamp>
+    </comp>
+    <comp ref="F1">
+      <value>Polyfuse</value>
+      <footprint>SDR-3:FUSE</footprint>
+      <libsource lib="SDR-3" part="Polyfuse" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C583F15</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>SMBJ18CA</value>
+      <footprint>SDR-3:smbj18ca</footprint>
+      <libsource lib="SDR-3" part="TVSANTI" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C58412A</tstamp>
+    </comp>
+    <comp ref="Q3">
+      <value>DMP3099L</value>
+      <footprint>SDR-3:SOT23_3</footprint>
+      <libsource lib="SDR-3" part="MOS_P" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C58421B</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>Barrel_Jack</value>
+      <footprint>SDR-3:BarrelJack_Wuerth_6941xx301002</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Barrel_Jack_Switch" description="DC Barrel Jack with an internal switch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C4C51FC</tstamp>
+    </comp>
+    <comp ref="T1">
+      <value>BN43-2402</value>
+      <footprint>SDR-3:BN43-2402_TRNS</footprint>
+      <libsource lib="SDR-3" part="TRANSFO" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C4CFBF9</tstamp>
+    </comp>
+    <comp ref="J5">
+      <value>Conn_01x02</value>
+      <footprint>SDR-3:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C4D169E</tstamp>
+    </comp>
+    <comp ref="T2">
+      <value>B62152A4X30</value>
+      <footprint>SDR-3:B62152A4X30_TRNS</footprint>
+      <libsource lib="SDR-3" part="TR_3P_2S" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C4E7EA5</tstamp>
+    </comp>
+    <comp ref="MH1">
+      <value>TestPoint</value>
+      <footprint>SDR-3:m3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C4CEBCC</tstamp>
+    </comp>
+    <comp ref="MH2">
+      <value>TestPoint</value>
+      <footprint>SDR-3:m3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C4CF024</tstamp>
+    </comp>
+    <comp ref="MH3">
+      <value>TestPoint</value>
+      <footprint>SDR-3:m3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C4CF08E</tstamp>
+    </comp>
+    <comp ref="MH4">
+      <value>TestPoint</value>
+      <footprint>SDR-3:m3</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C4CF0FC</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>BA50BC0WFP</value>
+      <footprint>SDR-3:TO-252-5_TabPin6</footprint>
+      <libsource lib="SDR-3" part="BA50BC0WFP" description="1A LDO, 5.0V fixed output voltage with CTL, TO252-5"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C593732</tstamp>
+    </comp>
+    <comp ref="C18">
+      <value>22u</value>
+      <footprint>SDR-3:CP_EIA-3528-15_AVX-H_Pad1.50x2.35mm_HandSolder</footprint>
+      <libsource lib="SDR-3" part="CP1" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C59380C</tstamp>
+    </comp>
+    <comp ref="C17">
+      <value>0.33u</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="C" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C593FB3</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>10k</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C5C351E</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>DNI</value>
+      <footprint>SDR-3:SM0603</footprint>
+      <libsource lib="SDR-3" part="R" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C5C3674</tstamp>
+    </comp>
+    <comp ref="J6">
+      <value>Conn_01x02</value>
+      <footprint>SDR-3:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5C5D2962</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Barrel_Jack_Switch">
+      <description>DC Barrel Jack with an internal switch</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>BarrelJack*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Barrel_Jack_Switch</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="TestPoint">
+      <description>test point</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SDR-3" part="BA50BC0WFP">
+      <description>1A LDO, 5.0V fixed output voltage with CTL, TO252-5</description>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">BA50BC0WFP</field>
+        <field name="Footprint">Package_TO_SOT_SMD:TO-252-5_TabPin6</field>
+      </fields>
+      <pins>
+        <pin num="1" name="CTL" type="input"/>
+        <pin num="2" name="Vcc" type="power_in"/>
+        <pin num="3" name="NC" type="NotConnected"/>
+        <pin num="4" name="OUT" type="power_out"/>
+        <pin num="5" name="NC" type="NotConnected"/>
+        <pin num="6" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="SDR-3" part="C">
+      <footprints>
+        <fp>SM*</fp>
+        <fp>C?</fp>
+        <fp>C1-1</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SDR-3" part="CP1">
+      <footprints>
+        <fp>CP*</fp>
+        <fp>SM*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SDR-3" part="MOSFET_N">
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">MOSFET_N</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SDR-3" part="MOS_P">
+      <aliases>
+        <alias>MOSFET_P</alias>
+      </aliases>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">MOS_P</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SDR-3" part="POT">
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">POT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SDR-3" part="Polyfuse">
+      <footprints>
+        <fp>*polyfuse*</fp>
+        <fp>*PTC*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">Polyfuse</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SDR-3" part="R">
+      <footprints>
+        <fp>R?</fp>
+        <fp>SM0603</fp>
+        <fp>SM0805</fp>
+        <fp>R?-*</fp>
+        <fp>SM1206</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SDR-3" part="TA76431F">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TA76431F</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="input"/>
+        <pin num="2" name="A" type="input"/>
+        <pin num="3" name="R" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="SDR-3" part="TRANSFO">
+      <fields>
+        <field name="Reference">T</field>
+        <field name="Value">TRANSFO</field>
+      </fields>
+      <pins>
+        <pin num="1" name="AA" type="passive"/>
+        <pin num="2" name="AB" type="passive"/>
+        <pin num="3" name="SA" type="passive"/>
+        <pin num="4" name="SB" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SDR-3" part="TR_3P_2S">
+      <fields>
+        <field name="Reference">T</field>
+        <field name="Value">TR_3P_2S</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="S4" type="passive"/>
+        <pin num="5" name="S5" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SDR-3" part="TVSANTI">
+      <footprints>
+        <fp>D?</fp>
+        <fp>S*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">TVSANTI</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>C:\Application\KiCad\share\kicad\library/Connector.lib</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>C:\Application\KiCad\share\kicad\library/Connector_Generic.lib</uri>
+    </library>
+    <library logical="SDR-3">
+      <uri>D:\KiCad\SDR-3\PD85004_PP_PA_KiCad_v1.2/SDR-3.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="GND">
+      <node ref="C6" pin="1"/>
+      <node ref="MH2" pin="1"/>
+      <node ref="MH1" pin="1"/>
+      <node ref="C18" pin="2"/>
+      <node ref="U2" pin="6"/>
+      <node ref="C13" pin="2"/>
+      <node ref="MH3" pin="1"/>
+      <node ref="C2" pin="1"/>
+      <node ref="C11" pin="1"/>
+      <node ref="C14" pin="1"/>
+      <node ref="C12" pin="1"/>
+      <node ref="C15" pin="2"/>
+      <node ref="RV2" pin="3"/>
+      <node ref="C17" pin="1"/>
+      <node ref="J6" pin="2"/>
+      <node ref="MH4" pin="1"/>
+      <node ref="C9" pin="2"/>
+      <node ref="C8" pin="1"/>
+      <node ref="C7" pin="1"/>
+      <node ref="Q2" pin="2"/>
+      <node ref="Q1" pin="2"/>
+      <node ref="C10" pin="1"/>
+      <node ref="Q3" pin="1"/>
+      <node ref="RV1" pin="3"/>
+      <node ref="R6" pin="1"/>
+      <node ref="J1" pin="2"/>
+      <node ref="J2" pin="2"/>
+      <node ref="C16" pin="2"/>
+      <node ref="T2" pin="5"/>
+      <node ref="U1" pin="2"/>
+      <node ref="J5" pin="2"/>
+      <node ref="D1" pin="2"/>
+      <node ref="J4" pin="2"/>
+      <node ref="T1" pin="2"/>
+      <node ref="J3" pin="2"/>
+      <node ref="R11" pin="1"/>
+    </net>
+    <net code="2" name="Net-(D1-Pad1)">
+      <node ref="J3" pin="1"/>
+      <node ref="D1" pin="1"/>
+      <node ref="F1" pin="2"/>
+    </net>
+    <net code="3" name="Net-(Q1-Pad1)">
+      <node ref="Q1" pin="1"/>
+      <node ref="R5" pin="2"/>
+    </net>
+    <net code="4" name="Net-(Q2-Pad1)">
+      <node ref="R9" pin="2"/>
+      <node ref="Q2" pin="1"/>
+    </net>
+    <net code="5" name="Net-(J4-Pad1)">
+      <node ref="J4" pin="1"/>
+      <node ref="R3" pin="1"/>
+    </net>
+    <net code="6" name="Net-(J3-Pad3)">
+      <node ref="J3" pin="3"/>
+    </net>
+    <net code="7" name="Net-(C3-Pad1)">
+      <node ref="T1" pin="3"/>
+      <node ref="C3" pin="1"/>
+    </net>
+    <net code="8" name="Net-(F1-Pad1)">
+      <node ref="F1" pin="1"/>
+      <node ref="Q3" pin="3"/>
+    </net>
+    <net code="9" name="Net-(J1-Pad1)">
+      <node ref="J1" pin="1"/>
+      <node ref="T1" pin="1"/>
+    </net>
+    <net code="10" name="Net-(J2-Pad1)">
+      <node ref="T2" pin="4"/>
+      <node ref="J2" pin="1"/>
+    </net>
+    <net code="11" name="Net-(R4-Pad1)">
+      <node ref="R4" pin="1"/>
+      <node ref="R6" pin="2"/>
+      <node ref="U1" pin="3"/>
+    </net>
+    <net code="12" name="Net-(C18-Pad1)">
+      <node ref="C18" pin="1"/>
+      <node ref="J5" pin="1"/>
+      <node ref="U2" pin="4"/>
+    </net>
+    <net code="13" name="Net-(J6-Pad1)">
+      <node ref="J6" pin="1"/>
+      <node ref="R10" pin="1"/>
+      <node ref="R11" pin="2"/>
+      <node ref="U2" pin="1"/>
+    </net>
+    <net code="14" name="Net-(U2-Pad5)">
+      <node ref="U2" pin="5"/>
+    </net>
+    <net code="15" name="Net-(U2-Pad3)">
+      <node ref="U2" pin="3"/>
+    </net>
+    <net code="16" name="/7.2V">
+      <node ref="C11" pin="2"/>
+      <node ref="C14" pin="2"/>
+      <node ref="C12" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C17" pin="2"/>
+      <node ref="U2" pin="2"/>
+      <node ref="T2" pin="2"/>
+      <node ref="C10" pin="2"/>
+      <node ref="C9" pin="1"/>
+      <node ref="C8" pin="2"/>
+      <node ref="C7" pin="2"/>
+      <node ref="R10" pin="2"/>
+      <node ref="Q3" pin="2"/>
+      <node ref="C6" pin="2"/>
+    </net>
+    <net code="17" name="/VG1">
+      <node ref="C13" pin="1"/>
+      <node ref="RV1" pin="2"/>
+      <node ref="R7" pin="1"/>
+    </net>
+    <net code="18" name="/VG2">
+      <node ref="C15" pin="1"/>
+      <node ref="R8" pin="1"/>
+      <node ref="RV2" pin="2"/>
+    </net>
+    <net code="19" name="Net-(C1-Pad1)">
+      <node ref="C1" pin="1"/>
+      <node ref="T1" pin="4"/>
+    </net>
+    <net code="20" name="Net-(C3-Pad2)">
+      <node ref="R8" pin="2"/>
+      <node ref="R9" pin="1"/>
+      <node ref="C3" pin="2"/>
+      <node ref="C5" pin="1"/>
+    </net>
+    <net code="21" name="Net-(Q2-Pad3)">
+      <node ref="Q2" pin="3"/>
+      <node ref="T2" pin="3"/>
+      <node ref="R2" pin="2"/>
+    </net>
+    <net code="22" name="Net-(Q1-Pad3)">
+      <node ref="Q1" pin="3"/>
+      <node ref="T2" pin="1"/>
+      <node ref="R1" pin="2"/>
+    </net>
+    <net code="23" name="Net-(C1-Pad2)">
+      <node ref="R7" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="C4" pin="1"/>
+      <node ref="R5" pin="1"/>
+    </net>
+    <net code="24" name="Net-(C16-Pad1)">
+      <node ref="RV1" pin="1"/>
+      <node ref="U1" pin="1"/>
+      <node ref="C16" pin="1"/>
+      <node ref="RV2" pin="1"/>
+      <node ref="R4" pin="2"/>
+      <node ref="R3" pin="2"/>
+    </net>
+    <net code="25" name="Net-(C5-Pad2)">
+      <node ref="C5" pin="2"/>
+      <node ref="R2" pin="1"/>
+    </net>
+    <net code="26" name="Net-(C4-Pad2)">
+      <node ref="R1" pin="1"/>
+      <node ref="C4" pin="2"/>
+    </net>
+  </nets>
+</export>

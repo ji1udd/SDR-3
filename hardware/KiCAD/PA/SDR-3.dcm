@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BA50BC0WFP
+D 1A LDO, 5.0V fixed output voltage with CTL, TO252-5
+K linear low dropout Regulator
+$ENDCMP
+#
+#End Doc Library
