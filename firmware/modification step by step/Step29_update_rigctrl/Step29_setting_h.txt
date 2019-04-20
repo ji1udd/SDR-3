@@ -1,0 +1,2 @@
+extern int civ_echo;
+extern unsigned char SDR3ADRS;

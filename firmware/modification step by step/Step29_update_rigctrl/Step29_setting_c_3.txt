@@ -1,0 +1,2 @@
+    *pdata++ = SDR3ADRS ;
+    *pdata++ = civ_echo ;

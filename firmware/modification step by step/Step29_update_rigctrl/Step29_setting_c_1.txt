@@ -1,0 +1,21 @@
+static void set_civ_adrs ( int rot );
+static void set_civ_echo ( int rot );
+
+
+
+#define N_SETTINGS  (23)       // 設定項目数
+
+
+
+  { "20.Waterfall      ", set_wf_mode },  // Waterfall表示のON/OFF選択
+  { "21.CI-V mode      ", set_civ_mode },  // CI-Vモード選択
+  { "22.CI-V adrs      ", set_civ_adrs },  // CI-Vアドレス選択
+  { "23.CI-V echo      ", set_civ_echo },  // CI-Vエコーバック選択
+
+
+
+  N_BATTMMODE,
+  N_WFMODE,
+  N_CIVMODE,
+  N_CIVADRS,
+  N_CIVECHO,

@@ -1,0 +1,2 @@
+} else {                          // CI-Vモード時、
+  civ_command_dispatch() ;        // CI-Vコマンド実行

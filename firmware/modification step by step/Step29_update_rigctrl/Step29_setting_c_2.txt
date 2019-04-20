@@ -1,0 +1,23 @@
+//--------------------------------------------------------------------
+// CI-V アドレス選択
+//--------------------------------------------------------------------
+static void set_civ_adrs ( int rot ) {
+  int adrs = (int) SDR3ADRS ;
+  adrs += rot;
+  if ( adrs > 255) {
+    adrs=255;
+  } else if ( adrs <0 ) {
+    adrs=0 ;
+  }
+  SDR3ADRS = (unsigned char) adrs ;
+  dec2str_s( adrs, setting_buttons[N_CIVADRS%N_ITEMS].str+15, 3 );
+}
+
+//--------------------------------------------------------------------
+// CI-V エコーバック選択
+//--------------------------------------------------------------------
+static void set_civ_echo ( int rot ) {
+  civ_echo += rot;
+  civ_echo &= 1;
+  strcopy( civ_echo?"ENB":"DIS", setting_buttons[N_CIVECHO%N_ITEMS].str+15);
+}

@@ -1,0 +1,2 @@
+      SDR3ADRS         = *adrs++;
+      civ_echo         = *adrs++;

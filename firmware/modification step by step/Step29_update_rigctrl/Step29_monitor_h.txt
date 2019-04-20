@@ -1,0 +1,1 @@
+void civ_command_dispatch( void );
