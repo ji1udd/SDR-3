@@ -220,9 +220,9 @@
 ### Step29:
 - CI-V機能の拡張を行い PC から SDR-3 の 周波数/モード(SSB,CW,AM)/送受信切替 を制御できるようにした。
 - settingメニューで CI-VプロトコルにおけるSDR-3のアドレス(0～255) と PCからのCI-Vコマンドのエコーバックを行うか否か を選択できる。
-- デフォルトのSDR-3アドレスを 0x94 (元々はIC-7300用の割り当て)に変更。WSJT-Xで PTT Method としてPTTを選択できる機種のアドレスとしたため。
+- デフォルトのSDR-3アドレスを 0x94 (元々はIC-7300用の割り当て)に変更。WSJT-Xで PTT Method としてCATを選択できる機種のアドレスとしたため。
 - WSJT-X : File⇒settings⇒Radioタブの「Test CAT」と「Test PTT」が Passすることを確認済。但し SDR-3は VFO B を備えていないなど制約があるため WSJT-Xの機能に制約があると思われる。
-- Hamlog/Ctestwinではエコーバックなしでも動作するが、WSJT-Xではエコバックありにしないと「Test CAT」でエラーとなる。
+- Hamlog/Ctestwinではエコーバックなしでも動作するが、WSJT-Xではエコーバックありにしないと「Test CAT」でエラーとなる。
 - Step29フォルダ中にある rigctrl.c を radioフォルダに入れる。 ( rigctrl.c を差し替える必要あり。内容更新あり)
 
 
