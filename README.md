@@ -225,6 +225,13 @@
 - Hamlog/Ctestwinではエコーバックなしでも動作するが、WSJT-Xではエコーバックありにしないと「Test CAT」でエラーとなる。
 - Step29フォルダ中にある rigctrl.c を radioフォルダに入れる。 ( rigctrl.c を差し替える必要あり。内容更新あり)
 
+### Step30:
+- ExtPTT出力の追加。ExtPTTを使用して外部機器をSDR-3の送受信と連動させることができる。ExtPTT出力は、受信時Hi-Z、送信時"L"レベルとなる。
+- PA12をデジトラ(DTC144)の入力に接続し、デジトラの出力を外部出力する。自機の場合は、オーディオインターフェイス基板上のJ2-4pinに接続。
+[_External PTT Schematic_](hardware/SDR-3_ExtPTT.pdf)
+- Settingメニューで ExtPTT出力を有効にするか、無効(=外部機器連動オフ)にするかを選択できる。
+- 無効にすることで、ExtPTTは常に Hi-Z となるので J2にステレオイヤホン(3極プラグ)を挿して聴くことができる(PHONE-RにExtPTTが干渉しないので)。
+- 有効にする場合は、4極プラグを使用する。
 
 
 ## その他

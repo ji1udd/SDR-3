@@ -1,0 +1,7 @@
+int extptt_enb = 0 ;
+
+
+    if ( extptt_enb ) EXTPTT_ON();
+
+
+    EXTPTT_OFF();

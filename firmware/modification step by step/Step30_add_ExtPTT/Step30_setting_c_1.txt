@@ -1,0 +1,12 @@
+static void set_extptt ( int rot );
+
+
+#define N_SETTINGS  (24)       // İ’è€–Ú”
+
+
+
+  { "24.Ext PTT        ", set_extptt },  // External PTTo—Í‘I‘ğ
+
+
+
+  N_EXTPTT,

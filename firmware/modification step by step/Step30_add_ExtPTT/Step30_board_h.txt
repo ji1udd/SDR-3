@@ -1,0 +1,5 @@
+// External PTT (Output)  - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#define EXTPTT_GPIO           GPIOA     // PA12( USB D+ , CN7 3pin )
+#define EXTPTT_PIN            12
+#define EXTPTT_ON()           PORT_SET(    EXTPTT_GPIO, EXTPTT_PIN )
+#define EXTPTT_OFF()          PORT_RESET(  EXTPTT_GPIO, EXTPTT_PIN )

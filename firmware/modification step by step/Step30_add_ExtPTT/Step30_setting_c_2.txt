@@ -1,0 +1,8 @@
+//--------------------------------------------------------------------
+// External PTTèoóÕÇÃON/OFFëIë
+//--------------------------------------------------------------------
+static void set_extptt ( int rot ) {
+  extptt_enb += rot;
+  extptt_enb &= 1;
+  strcopy( extptt_enb?"ENB":"DIS", setting_buttons[N_EXTPTT%N_ITEMS].str+15);
+}

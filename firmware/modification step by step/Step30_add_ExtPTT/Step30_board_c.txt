@@ -1,0 +1,4 @@
+  stm32_gpio_mode( TX_GPIO, TX_PIN, GPIO_MODE_OUT );
+  stm32_gpio_mode( EXTPTT_GPIO, EXTPTT_PIN, GPIO_MODE_OUT );
+  TX_OFF();
+  EXTPTT_OFF();
