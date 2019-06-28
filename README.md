@@ -235,6 +235,12 @@
 
 
 ## その他
+### Option1:
+- PHASモードでSSB送信した時の変調特性の改善を図ってみた。特性の実測値については [JA3GSEさんのホームページ](http://www.ja3gse.sakura.ne.jp/SDR-3.html) をご覧下さい。
+- Hilbert変換フィルタのタップ数を 127 から 255 に変更
+- Hilbert変換フィルタの係数値として パスバンド 96Hz～5904Hz (正規化周波数 0.008～0.492) で設計した値を使用
+
+
 ### Appendix1:
 - 付録DVD-ROMのソースに対して、main20180812.hex の settingメニューで "Freq Popup"を "OFF" にしたのと同じ動作にするための修正箇所。
 - radio.c の radio_rotaryenc 中の 4箇所をコメントアウトする。
