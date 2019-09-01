@@ -246,6 +246,24 @@
 - Hilbert変換フィルタのタップ数を 511 に変更
 - Hilbert変換フィルタの係数値として パスバンド 48Hz～5952Hz (正規化周波数 0.004～0.496) で設計した値を使用
 
+### Option3:
+- 超初心者さんアイデアの「RXゲイン設定とスペクトラム表示の連動(ex. RXゲインを上げたら信号レベルも上がる)」を実現する場合の変更箇所
+- radio.c の static void rfgain_setting( void ) 内の記述を下記に変更する( -db+33 を +13 に変更 )
+```c
+   fft_dboffset( FFT_DBOFFSET+13 );   // 実測値に合わせ込んだ
+```
+
+- 更にスペクトラム表示の縦軸スケール(REFレベル)を連動させる場合は、下記とする。
+- static void rfgain_setting( void ) 内の記述に speanaref_setting()を追加。
+```c
+   fft_dboffset( FFT_DBOFFSET+13 );   // 実測値に合わせ込んだ
+   speanaref_setting();               // スペアナ Ref を設定
+```
+speanaref_setting( void ) 内の記述で スペアナRefにRXゲイン設定値も加味するように変更。
+```c
+   int sel =  menus[N_MENU_SPREF].sel + menus[N_MENU_RXGAIN].sel - 2 ;
+```
+
 
 ### Appendix1:
 - 付録DVD-ROMのソースに対して、main20180812.hex の settingメニューで "Freq Popup"を "OFF" にしたのと同じ動作にするための修正箇所。
