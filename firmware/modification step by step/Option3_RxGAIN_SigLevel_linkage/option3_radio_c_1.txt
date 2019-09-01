@@ -1,0 +1,2 @@
+  fft_dboffset( FFT_DBOFFSET+13 );   // 実測値に合わせ込んだ
+  speanaref_setting();               // スペアナ Ref を設定

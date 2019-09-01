@@ -1,0 +1,1 @@
+    int sel =  menus[N_MENU_SPREF].sel + menus[N_MENU_RXGAIN].sel - 2 ;
