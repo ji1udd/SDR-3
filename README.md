@@ -2,9 +2,10 @@
 
 ## CWモード、Sメーター、ウォーターフォール表示などの機能追加
 - ハードウェア製作については、[wiki](https://github.com/ji1udd/SDR-3/wiki) を参照して下さい。
-- 番外: SDR-3A基板を オリジナル製作のDDC/DUC基板(回路はHerms-Lite2を参考)で置き換えてHFマルチバンダ(160M-10M) になりました。送信出力5W(2020年6月)。  
-<img src="hardware/Doc/Replace_SDR3A_with_DDC-DUC_board.jpg" width="320px">  
-[Jump to DDC/DUC page](https://github.com/ji1udd/SDR-3/wiki/7_SDR-3-%E3%82%92DDC-DUC%E5%8C%96/) 
+- 番外1: SDR-3A基板を オリジナル製作のDDC/DUC基板(回路はHerms-Lite2を参考)で置き換えて HFマルチバンダ(160M-10M) になりました。送信出力5W(2020年6月)。 [Jump to DDC/DUC page](https://github.com/ji1udd/SDR-3/wiki)  
+- 番外2: 番外1から更に SDR-3D基板を STM32H743 を使用したオリジナル製作基板で置き換えて 2波同時受信可能 (SO2R) になりました。(2021年6月)
+<img src="hardware/Doc/SDR-3_DDC_and_SO2R-SDR.jpg" width="640px">  
+
 
 ### はじめに
 - ソフトウェア開発環境の構築方法はおじさん工房のHPに掲載されています。
